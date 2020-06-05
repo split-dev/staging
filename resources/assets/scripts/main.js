@@ -3,7 +3,6 @@
 
 // import external dependencies
 import './util/polyfills'
-import 'jquery';
 
 // Import everything from autoload
 import './autoload/**/*'

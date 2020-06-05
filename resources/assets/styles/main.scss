@@ -9,8 +9,7 @@
 @import "mixins";
 @import "type";
 
-@import "layouts/welcome";
-@import "components/animate";
+@import "layouts/index";
 
 /** Import everything from autoload */
 @import "autoload/lazy";
@@ -21,6 +20,7 @@
  * Prefix your imports with `~` to grab from node_modules/
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
+@import "~fullpage.js/dist/fullpage.min.css";
 
 /**
  * ==========
@@ -32,6 +32,8 @@
  */
 // @import "components/buttons";
 @import "components/fonts";
+@import "components/menu";
+@import "components/tooltip";
 
 /**
  * ==========
@@ -41,3 +43,5 @@
  * such as header, footer
  */
 // @import "layouts/base";
+
+@import "common/global";

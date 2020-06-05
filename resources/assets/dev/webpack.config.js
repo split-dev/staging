@@ -141,12 +141,12 @@ let webpackConfig = {
     new ExtractTextPlugin({
       filename: `styles/${assetsFilenames}.css`,
       disable: false}),
-    new webpack.ProvidePlugin({
+    /*new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
       // Popper: 'popper.js/dist/umd/popper.js',
-    }),
+    }),*/
     new webpack.LoaderOptionsPlugin({
       minimize: config.enabled.optimize,
       debug: config.enabled.watcher,
