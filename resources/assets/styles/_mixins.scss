@@ -49,19 +49,38 @@
   font-size: $responsive;
 }
 
-@mixin hkg-bold {
-  font-family: "HK Grotesk", sans-serif;
-  font-weight: bold;
+@mixin NexaLight {
+  font-family: "Nexa", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
-@mixin hkg-med {
-  font-family: "HK Grotesk", sans-serif;
-  font-weight: 500;
-}
-@mixin hkg-reg {
-  font-family: "HK Grotesk", sans-serif;
+
+@mixin NexaReg {
+  font-family: "Nexa", sans-serif;
   font-weight: 400;
+  font-style: normal;
 }
-@mixin hkg-sb {
-  font-family: "HK Grotesk", sans-serif;
-  font-weight: 600;
+
+@mixin NexaBold {
+  font-family: "Nexa", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin NexaXBold {
+  font-family: "Nexa XBold", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin Gotham900 {
+  font-family: "Gotham", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin Myriad {
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
