@@ -49,6 +49,12 @@ export default {
         $( '#ILLUSTRATION > g' ).css( 'opacity', '1' );
       }
     );
+
+    let left = $('#ILLUSTRATION .cl-4').position().left;
+    let top = $('#ILLUSTRATION .cl-4').position().top;
+    console.log(left)
+    console.log($('.cls-sub-5'))
+    $('.cls-sub-4').css({'left': left, 'top': top + 50})
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired
