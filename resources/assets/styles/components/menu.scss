@@ -32,6 +32,9 @@ svg {
     max-height: 540px;
     display: flex;
     align-items: flex-end;
+    @media (min-height: 740px) {
+      margin-top: 70px;
+    }
     svg {
       width: 100%;
       height: 100%;
