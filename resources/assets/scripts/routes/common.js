@@ -6,6 +6,10 @@ export default {
     //pagination
     let pag = $('.tooltip-split li');
 
+    //width
+    let width = $('body').width();
+
+
     new fullpage('#fullpage', {
       //options here
       scrollingSpeed: 1000,
@@ -17,6 +21,20 @@ export default {
         //console.log(index)
         $('.tooltip-split li a').removeClass('active');
         $(pag[nextIndex.index]).children('a').addClass('active');
+
+
+        //position line
+        if (nextIndex.index > 0) {
+          let Line = $(nextIndex.item).find($('.oval')).offset().left + ($('.oval').width() / 2);
+          let position = $(nextIndex.item).find($('.anim-svg')).attr('data-position');
+          if (position == 'left') {
+            $(nextIndex.item).find($('.anim-svg')).css({'left': Line});
+          } else {
+            let res = width - Line + 5;
+            console.log(res)
+            $(nextIndex.item).find($('.anim-svg')).css({'right': res});
+          }
+        }
       },
 
       // eslint-disable-next-line no-unused-vars
@@ -51,20 +69,10 @@ export default {
       }
     );
 
-    /*let left = $('#ILLUSTRATION .cl-4').position().left;
+    let left = $('#ILLUSTRATION .cl-4').position().left;
     let top = $('#ILLUSTRATION .cl-4').position().top;
 
-    $('.cls-sub-4').css({'left': left, 'top': top + 50})*/
-
-    console.log($('.fix-container').offset().left)
-
-    if (!$('body').height() < 768) {
-      let leftLine = $('.oval').position().left + ($('.oval').width() - 120);
-      $('.one-page .anim-svg').css({'left': leftLine})
-    } else {
-      let leftLine = $('.oval').position().left + ($('.oval').width() / 2);
-      $('.one-page .anim-svg').css({'left': leftLine})
-    }
+    $('.cls-sub-4').css({'left': left, 'top': top + 50})
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired

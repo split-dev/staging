@@ -4,6 +4,9 @@
 .color-2 {
   background-image: linear-gradient(160deg, #6cc2b0 0%, #6cc2b0 13.568%, #f5e087 99.8282%, #f5e087 100%);
 }
+.color-3 {
+  background-image: linear-gradient(160deg, #64d0eb 0%, #64d0eb 0.08504980000000004%, #e6eed6 100%);
+}
 
 body {
   position: relative;
@@ -37,9 +40,18 @@ body {
   max-width: 363px;
   height: 364px;
   border-radius: 50%;
-  margin-right: 90px;
+  &.right {
+    margin-left: 90px;
+  }
+  &.left {
+    margin-right: 90px;
+  }
 }
 
 .oval-color-1 {
   background-color: #60bb84;
+}
+
+.oval-color-2 {
+  background-color: #60cce2;
 }
