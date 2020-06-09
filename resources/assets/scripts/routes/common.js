@@ -16,7 +16,12 @@ export default {
       onLeave: function(index, nextIndex, direction) {
         //console.log(index)
         $('.tooltip-split li a').removeClass('active');
-        $(pag[nextIndex.index]).children('a').addClass('active')
+        $(pag[nextIndex.index]).children('a').addClass('active');
+      },
+
+      // eslint-disable-next-line no-unused-vars
+      afterLoad: function(origin, destination, direction){
+        $(destination.item).find($('.anim-svg')).addClass('start')
       },
     });
 
@@ -37,10 +42,6 @@ export default {
       $(this).find('a').addClass('active');
     });
 
-    $('#ILLUSTRATION g').click( function () {
-      console.log(this)
-    });
-
     //hover menu
     $( '#ILLUSTRATION > g:not(.cls-13)' ).hover(
       function() {
@@ -50,11 +51,20 @@ export default {
       }
     );
 
-    let left = $('#ILLUSTRATION .cl-4').position().left;
+    /*let left = $('#ILLUSTRATION .cl-4').position().left;
     let top = $('#ILLUSTRATION .cl-4').position().top;
-    console.log(left)
-    console.log($('.cls-sub-5'))
-    $('.cls-sub-4').css({'left': left, 'top': top + 50})
+
+    $('.cls-sub-4').css({'left': left, 'top': top + 50})*/
+
+    console.log($('.fix-container').offset().left)
+
+    if (!$('body').height() < 768) {
+      let leftLine = $('.oval').position().left + ($('.oval').width() - 120);
+      $('.one-page .anim-svg').css({'left': leftLine})
+    } else {
+      let leftLine = $('.oval').position().left + ($('.oval').width() / 2);
+      $('.one-page .anim-svg').css({'left': leftLine})
+    }
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired

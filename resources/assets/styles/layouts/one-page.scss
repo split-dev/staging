@@ -1,0 +1,13 @@
+.one-page {
+  outline: none;
+  .anim-svg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: auto;
+    bottom: 0;
+    @media (min-height: 768px) {
+      transform: scale(1.2);
+    }
+  }
+}

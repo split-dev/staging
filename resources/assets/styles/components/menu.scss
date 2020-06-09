@@ -104,34 +104,3 @@ svg {
     opacity: 0;
   }
 }
-
-.color-2 {
-  .swiper-container {
-    display: none;
-  }
-}
-//swiper all
-.swiper-wrapper {
-  height: 100%;
-}
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  .swiper-slide {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-//oval-color
-.oval {
-  min-width: 363px;
-  max-width: 363px;
-  height: 364px;
-  border-radius: 50%;
-  margin-right: 90px;
-}
-
-.oval-color-1 {
-  background-color: #60bb84;
-}
