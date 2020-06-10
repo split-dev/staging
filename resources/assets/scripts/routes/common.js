@@ -31,13 +31,7 @@ export default {
 
     // eslint-disable-next-line no-undef,no-unused-vars
     var oneSlider = new Swiper('.swiper-container', {
-      spaceBetween: 30,
       effect: 'fade',
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-
     });
 
     $('.tooltip-split li').click( function (e) {
