@@ -2,6 +2,9 @@
   outline: none;
   .oval {
     margin-right: 90px;
+    @media (max-height: 768px) {
+      margin-right: 35px;
+    }
   }
   .anim-svg {
     position: absolute;
@@ -10,5 +13,65 @@
     height: 100%;
     right: auto;
     bottom: 0;
+  }
+  .animate-img {
+    img {
+      transition: 0.7s;
+      &:first-of-type {
+        top: 100px;
+        left: -10px;
+        z-index: 5;
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      &:nth-of-type(2) {
+        top: 185px;
+        right: 53px;
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      &:nth-of-type(3) {
+        top: 148px;
+        right: 45px;
+        transform: translateX(30px);
+        opacity: 0;
+      }
+    }
+    &.anim-1 {
+      img {
+        &:first-of-type {
+          transform: scale(1);
+          opacity: 1;
+        }
+        &:nth-of-type(2) {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+    &.anim-1-fix {
+      img {
+        &:first-of-type {
+          transform: scale(1);
+          opacity: 1;
+        }
+        &:nth-of-type(2) {
+          transform: translateX(30px);
+          opacity: 0;
+        }
+      }
+    }
+    &.anim-3 {
+      img {
+        &:nth-of-type(2) {
+          transform: translateX(30px);
+          opacity: 0;
+        }
+        &:nth-of-type(3) {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
   }
 }
