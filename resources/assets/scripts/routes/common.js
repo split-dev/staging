@@ -69,10 +69,30 @@ export default {
       }
     );
 
-    let left = $('#ILLUSTRATION .cl-4').position().left;
-    let top = $('#ILLUSTRATION .cl-4').position().top;
+    // eslint-disable-next-line no-unused-vars
+    function position(leftE,topE,heightE, classEl) {
+      /*console.log(leftE)
+      console.log(topE)
+      console.log(heightE)*/
+      //let fixPos = topE + heightE - 40;
+      let percent = topE + heightE - (10 * heightE / 100);
+      $(`[counterel="${classEl}"]`).css({'left': leftE, 'top': percent})
+      /*$('.cls-sub-' + class).css({'left': left, 'top': top + 50});*/
+    }
 
-    $('.cls-sub-4').css({'left': left, 'top': top + 50})
+    /*setTimeout(function(){
+      console.log()
+    }, 1000);*/
+ /*   document.querySelector('#ILLUSTRATION .counter').getBoundingClientRect()*/
+    let array = document.querySelectorAll('#ILLUSTRATION .counter');
+    let counter = array.length;
+    for (let i = 0; i < counter; i++) {
+      let left = (array[i]).getBoundingClientRect().left;
+      let top = (array[i]).getBoundingClientRect().top;
+      let height = (array[i]).getBoundingClientRect().height;
+      let classEl = (array[i]).getAttribute('counter');
+      position(left,top,height, classEl);
+    }
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired
