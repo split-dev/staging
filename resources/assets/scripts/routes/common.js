@@ -7,7 +7,7 @@ export default {
     let pag = $('.tooltip-split li');
 
     //width
-    let width = $('body').width();
+   //let width = $('body').width();
 
 
     new fullpage('#fullpage', {
@@ -21,20 +21,6 @@ export default {
         //console.log(index)
         $('.tooltip-split li a').removeClass('active');
         $(pag[nextIndex.index]).children('a').addClass('active');
-
-
-        //position line
-        if (nextIndex.index > 0) {
-          let Line = $(nextIndex.item).find($('.oval')).offset().left + ($('.oval').width() / 2);
-          let position = $(nextIndex.item).find($('.anim-svg')).attr('data-position');
-          if (position == 'left') {
-            $(nextIndex.item).find($('.anim-svg')).css({'left': Line});
-          } else {
-            let res = width - Line + 5;
-            console.log(res)
-            $(nextIndex.item).find($('.anim-svg')).css({'right': res});
-          }
-        }
       },
 
       // eslint-disable-next-line no-unused-vars

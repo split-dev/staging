@@ -1,10 +1,12 @@
 .two-page {
   outline: none;
   .oval {
-    margin-left: 50px;
+    margin-left: 90px;
   }
   .anim-svg {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
     height: 100%;
     right: auto;

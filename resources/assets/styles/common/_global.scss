@@ -55,3 +55,9 @@ body {
 .oval-color-2 {
   background-color: #60cce2;
 }
+
+.section:not(.color-1) {
+  svg {
+    pointer-events: none;
+  }
+}
