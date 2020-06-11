@@ -121,3 +121,12 @@ body {
     }
   }
 }
+
+//tooltip animate
+.tooltip_alt {
+  transform: translateX(-300%) !important;
+  transition: 0.6s !important;
+  &.show {
+    transform: translateX(0) !important;
+  }
+}
