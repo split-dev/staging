@@ -129,6 +129,14 @@ body {
   }
 }
 
+.navigation-one {
+  opacity: 0;
+  transition: 0.5s;
+  &.show {
+    opacity: 1;
+  }
+}
+
 //tooltip animate
 .tooltip_alt {
   transform: translateX(-300%) !important;

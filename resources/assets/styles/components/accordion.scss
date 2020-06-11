@@ -1,7 +1,7 @@
 .accordion {
   margin-top: 15px;
   .card {
-    margin-bottom: 24px;
+    margin-bottom: 5px;
   }
   .card-header {
     .btn {
@@ -13,6 +13,7 @@
       text-decoration: none !important;
       position: relative;
       width: 100%;
+      text-align: left;
       &:hover {
         text-decoration: none;
       }

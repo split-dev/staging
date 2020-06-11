@@ -2,6 +2,18 @@
   max-width: 1090px;
   margin: auto;
 }
+
+.swiper-container {
+  .swiper-slide {
+    &:first-child {
+      .info-slide__head {
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+      }
+    }
+  }
+}
+
 .animate-img {
   position: relative;
   z-index: 20;
@@ -38,7 +50,12 @@ p.desc {
   font-size: 18px;
   line-height: 25px;
   letter-spacing: -0.36px;
+  opacity: 0;
+  transition: 0.5s;
   @include NexaReg;
+  &.show {
+    opacity: 1;
+  }
 }
 
 .info-slide {
@@ -52,21 +69,22 @@ p.desc {
   &__head {
     opacity: 0;
     transform: translateY(40px);
-    transition: 0.7s;
-
-    &.show {
+    transition: 0.5s;
+    &.show-title {
       opacity: 1;
       transform: translateY(0);
     }
   }
   &__other {
     min-height: 320px;
-    opacity: 0;
-    transform: translateX(-60px);
-    transition: 0.7s;
-    &.show {
-      opacity: 1 !important;
-      transform: translateX(0) !important;
+    transition: 0.5s;
+    &.fade-left {
+      opacity: 0 !important;
+      transform: translateX(-30px) !important;
+    }
+    &.fade-right {
+      opacity: 0 !important;
+      transform: translateX(30px) !important;
     }
   }
 
