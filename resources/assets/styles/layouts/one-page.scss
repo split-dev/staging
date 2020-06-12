@@ -1,11 +1,5 @@
 .one-page {
   outline: none;
-  .oval {
-    margin-right: 90px;
-    @media (max-height: 768px) {
-      margin-right: 35px;
-    }
-  }
   .anim-svg {
     position: absolute;
     left: 50%;
@@ -15,6 +9,11 @@
     bottom: 0;
   }
   .animate-img {
+    max-width: 363px;
+    margin-right: 90px;
+    @media (max-height: 768px) {
+      margin-right: 35px;
+    }
     img {
       transition: 0.5s;
       &:first-of-type {
