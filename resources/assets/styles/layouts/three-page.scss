@@ -15,4 +15,14 @@
     right: auto;
     bottom: 0;
   }
+  .animate-img {
+    max-width: 363px;
+    margin-right: 90px;
+    @media (max-height: 768px) {
+      margin-right: 35px;
+    }
+    @media (min-height: 768px) {
+      margin-left: 18px;
+    }
+  }
 }
