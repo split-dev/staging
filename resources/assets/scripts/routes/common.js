@@ -1,6 +1,7 @@
 import fullpage from 'fullpage.js/dist/fullpage.min'
 import 'bootstrap'
 import './two-slider'
+import './three-slider'
 
 export default {
   init() {
@@ -36,7 +37,10 @@ export default {
           $(destination.item).find($('.one .navigation-one')).addClass('show');
         } else if (destination.index == 2) {
           $(destination.item).find($('.two .info-slide__head .desc')).addClass('show');
-          $(destination.item).find($('.one .navigation-two')).addClass('show');
+          $(destination.item).find($('.two .navigation-two')).addClass('show');
+        } else if (destination.index == 3) {
+          $(destination.item).find($('.three .info-slide__head .desc')).addClass('show');
+          $(destination.item).find($('.three .navigation-three')).addClass('show');
         }
 
 
