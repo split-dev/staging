@@ -224,7 +224,7 @@
     transform: translateX(-10px);
     @include NexaReg;
     span {
-      line-height: 19px;
+      line-height: 16px;
     }
   }
   #fp-nav.tooltip_alt ul li:hover {
@@ -236,9 +236,6 @@
       opacity: 1;
       transform: translateX(0);
     }
-  }
-  #fp-nav.tooltip_alt ul li:hover .fp-tooltip .tooltip-inner {
-    transform: translateX(-2px);
   }
   #fp-nav.tooltip_alt ul li .fp-tooltip,
   #fp-nav.tooltip_alt ul li .fp-tooltip .tooltip-inner {

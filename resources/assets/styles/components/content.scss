@@ -40,7 +40,7 @@ h3 {
   color: #fff;
   font-size: 20px;
   letter-spacing: 0.24px;
-  margin-top: 45px;
+  margin-top: 35px;
   @include NexaXBold;
 }
 
@@ -58,14 +58,22 @@ p.desc {
   }
 }
 
+.swiper-container {
+  .swiper-slide {
+    &:first-child {
+      .info-slide {
+        justify-content: center;
+      }
+    }
+  }
+}
 .info-slide {
   max-width: 540px;
-  margin-bottom: 30px;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   &__head {
     opacity: 0;
     transform: translateY(40px);
@@ -76,7 +84,7 @@ p.desc {
     }
   }
   &__other {
-    min-height: 320px;
+    min-height: 415px;
     transition: 0.5s;
     &.fade-left {
       opacity: 0 !important;

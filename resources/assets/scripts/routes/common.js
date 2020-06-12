@@ -114,7 +114,7 @@ export default {
         } else if (oneSlider.activeIndex === 3) {
           $('.one-page .animate-img').removeClass('hide-4 hide-5');
         }  else if (oneSlider.activeIndex === 4) {
-          $('.one-page .animate-img').removeClass('hide-1 hide-2');
+          $('.one-page .animate-img').removeClass('hide-1 hide-6');
         }
       }, 400);
 
@@ -195,30 +195,34 @@ export default {
 
     function nextSlide(numberSlide) {
       if (numberSlide == 0) {
-        if (oneSlider.activeIndex == 1 || oneSlider.activeIndex == 2 || oneSlider.activeIndex == 4) {
-          $('.one-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5');
+        if (oneSlider.activeIndex == 1 || oneSlider.activeIndex == 2 && !oneSlider.activeIndex == 4) {
+          $('.one-page .animate-img').addClass('hide-3 hide-4 hide-5 hide-6');
+        } else if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 2 || oneSlider.activeIndex == 4) {
+          $('.one-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6');
         } else {
-          $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
+          $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6');
         }
       } else if (numberSlide == 1) {
-        if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 2 || oneSlider.activeIndex == 4) {
-          $('.one-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5');
+        if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 2 && !oneSlider.activeIndex == 4) {
+          $('.one-page .animate-img').addClass('hide-3 hide-4 hide-5 hide-6');
+        } else if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 2 || oneSlider.activeIndex == 4) {
+          $('.one-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6');
         } else {
-          $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
+          $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6');
         }
       } else if (numberSlide == 2) {
         if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 1 || oneSlider.activeIndex == 4) {
-          $('.one-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5');
+          $('.one-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6');
         } else {
-          $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
+          $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6');
         }
       } else if (numberSlide == 3) {
-        $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
+        $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6');
       } else if (numberSlide == 4) {
         if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 1 || oneSlider.activeIndex == 2) {
-          $('.one-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5');
+          $('.one-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6');
         } else {
-          $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
+          $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6');
         }
       }
     }

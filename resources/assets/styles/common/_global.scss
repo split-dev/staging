@@ -145,3 +145,11 @@ body {
     transform: translateX(0) !important;
   }
 }
+
+.fix-container {
+  .container {
+    @media (min-height: 768px) {
+      max-width: inherit;
+    }
+  }
+}
