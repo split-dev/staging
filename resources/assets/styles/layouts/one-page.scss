@@ -17,31 +17,31 @@
     img {
       transition: 0.5s;
       &:first-of-type {
-        top: 100px;
-        left: -10px;
+        top: 160px;
+        left: 10px;
         z-index: 5;
         transform: scale(0.7) translateX(0);
         opacity: 0;
       }
       &:nth-of-type(2) {
-        top: 185px;
-        right: 53px;
+        top: 237px;
+        right: 0;
         transform: scale(0.7) translateX(0);
         opacity: 0;
       }
       &:nth-of-type(3) {
-        top: 148px;
-        right: 45px;
+        top: 200px;
+        right: -10px;
         transform: translateX(0);
       }
       &:nth-of-type(4) {
-        top: 121px;
-        left: 56px;
+        top: 141px;
+        left: 75px;
         transform: translateX(0);
       }
       &:nth-of-type(5) {
-        top: 165px;
-        right: 90px;
+        top: 185px;
+        right: 26px;
         transform: translateX(0);
       }
     }
