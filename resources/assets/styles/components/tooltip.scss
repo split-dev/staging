@@ -210,7 +210,7 @@
     pointer-events: none;
     width: auto;
     opacity: 0;
-    padding: 0 20px;
+    padding: 0 10px;
     height: 17px;
     background-color: #fff;
     border-radius: 30px !important;
@@ -224,7 +224,7 @@
     transform: translateX(-10px);
     @include NexaReg;
     span {
-      line-height: 17px;
+      line-height: 19px;
     }
   }
   #fp-nav.tooltip_alt ul li:hover {

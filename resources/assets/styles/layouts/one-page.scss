@@ -14,6 +14,9 @@
     @media (max-height: 768px) {
       margin-right: 35px;
     }
+    @media (min-height: 768px) {
+      margin-left: 18px;
+    }
     img {
       transition: 0.5s;
       &:first-of-type {

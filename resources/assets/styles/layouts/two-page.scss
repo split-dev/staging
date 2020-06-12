@@ -28,6 +28,9 @@
     @media (max-height: 768px) {
       margin-left: 35px;
     }
+    @media (min-height: 768px) {
+      margin-right: 18px;
+    }
     img {
       position: absolute;
       transition: 0.5s;
