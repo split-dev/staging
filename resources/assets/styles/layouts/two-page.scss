@@ -13,12 +13,6 @@
 }
 .two-page {
   outline: none;
-  .oval {
-    margin-left: 90px;
-    @media (max-height: 768px) {
-      margin-left: 35px;
-    }
-  }
   .anim-svg {
     position: absolute;
     left: 50%;
@@ -29,6 +23,11 @@
     bottom: 0;
   }
   .animate-img {
+    max-width: 363px;
+    margin-left: 90px;
+    @media (max-height: 768px) {
+      margin-left: 35px;
+    }
     img {
       position: absolute;
       transition: 0.5s;
@@ -45,8 +44,8 @@
         opacity: 0;
       }
       &:nth-of-type(3) {
-        left: 36px;
-        top: 76px;
+        left: 35px;
+        top: 81px;
       }
       &:nth-of-type(4) {
         left: -80px;
