@@ -1,5 +1,6 @@
 import fullpage from 'fullpage.js/dist/fullpage.min'
 import 'bootstrap'
+import './two-slider'
 
 export default {
   init() {
@@ -34,7 +35,8 @@ export default {
           $(destination.item).find($('.one .info-slide__head .desc')).addClass('show');
           $(destination.item).find($('.one .navigation-one')).addClass('show');
         } else if (destination.index == 2) {
-          $(destination.item).find($('.two .info-slide__head .desc')).addClass('show')
+          $(destination.item).find($('.two .info-slide__head .desc')).addClass('show');
+          $(destination.item).find($('.one .navigation-two')).addClass('show');
         }
 
 
@@ -217,84 +219,8 @@ export default {
       }
     }
 
-    //swiper two
-    //swiper swipe
-    // eslint-disable-next-line no-undef,no-unused-vars
-    var twoSlider = new Swiper('.swiper-container-two', {
-      speed: 0,
-      onlyExternal:true,
-      effect: 'fade',
-    });
 
-    twoSlider.on('transitionStart', function () {
-      $('.swiper-container-two .swiper-slide').removeClass('hide');
-      $('.swiper-container-two .swiper-slide:not(.swiper-slide-active)').addClass('hide');
-      //pagination
-      let active = twoSlider.activeIndex;
-      let array = $('.two .navigation-pag li');
-      $('.two .navigation-pag li').removeClass('def active')
-      for (let i = 0; i <= active; i++) {
-        if (i < active) {
-          $(array[i]).addClass('def');
-        } else if (i == active) {
-          $(array[i]).addClass('active');
-          break;
-        }
-      }
 
-      //animate
-      let anim = twoSlider.realIndex;
-      console.log(anim)
-      $('.swiper-container-two .swiper-slide .info-slide__other').removeClass('show');
-      if (anim == 0) {
-        $('.one-page .animate-img').removeClass('anim-2 anim-3 anim-4 anim-5 anim-4-fix').addClass('anim-1');
-      } else if (anim == 1) {
-        $('.one-page .animate-img').removeClass('anim-3 anim-4 anim-5 anim-4-fix');
-        setTimeout(function(){
-          $('.one-page .animate-img').addClass('anim-1 anim-2');
-        }, 450);
-      }  else if (anim == 2) {
-        $('.one-page .animate-img').removeClass('anim-1 anim-2 anim-4 anim-5 anim-4-fix').addClass('anim-1-fix');
-        setTimeout(function(){
-          $('.one-page .animate-img').addClass('anim-3');
-        }, 450);
-      } else if (anim == 3) {
-        $('.one-page .animate-img').removeClass('anim-1 anim-2 anim-3').addClass('anim-4-fix');
-        setTimeout(function(){
-          $('.one-page .animate-img').addClass('anim-4 anim-5');
-        }, 450);
-      }  else if (anim == 4) {
-        $('.one-page .animate-img').removeClass('anim-2 anim-3 anim-4 anim-5 anim-4-fix').addClass('anim-1');
-      }
-
-      setTimeout(function(){
-        $('.swiper-container-two .swiper-slide-active .info-slide__other').addClass('show');
-      }, 450);
-    });
-
-    //arrow click
-    $('.two .arrow-left').click( function () {
-      setTimeout(function(){
-        $('.one .swiper-slide-active .info-slide__other').removeClass('show');
-        twoSlider.slidePrev();
-      }, 450);
-    });
-
-    $('.two .arrow-right').click( function () {
-      setTimeout(function(){
-        $('.one .swiper-slide-active .info-slide__other').removeClass('show');
-      }, 450);
-      setTimeout(function(){
-        $('.one .swiper-slide-active .info-slide__other').removeClass('show');
-        twoSlider.slideNext();
-      }, 500);
-    });
-
-    //pag click
-    $('.two .navigation-pag li').click( function () {
-      let el = $(this).attr('data-number');
-      twoSlider.slideTo(el)
-    });
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired

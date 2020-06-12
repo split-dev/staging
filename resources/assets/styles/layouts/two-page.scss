@@ -28,4 +28,34 @@
     right: auto;
     bottom: 0;
   }
+  .animate-img {
+    img {
+      position: absolute;
+      transition: 0.5s;
+      &:first-of-type {
+        left: 55px;
+        top: 145px;
+        transform: scale(0.7) translateX(0);
+        opacity: 0;
+      }
+      &:nth-of-type(2) {
+        right: -6px;
+        top: 133px;
+        transform: scale(0.7) translateX(0);
+        opacity: 0;
+      }
+    }
+    &.start-zoom {
+      img {
+        &:first-of-type {
+          transform: scale(1) translateX(0);
+          opacity: 1;
+        }
+        &:nth-of-type(2) {
+          transform: scale(1) translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
