@@ -110,6 +110,7 @@ export default {
 
       setTimeout( function () {
         if (oneSlider.activeIndex === 0) {
+          $('.one .swiper-slide:first-child .info-slide__head').removeClass('hide-title');
           $('.one-page .animate-img').removeClass('hide-1 hide-2');
         } else if (oneSlider.activeIndex === 1) {
           $('.one-page .animate-img').removeClass('hide-1 hide-2');
@@ -207,6 +208,7 @@ export default {
           $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6');
         }
       } else if (numberSlide == 1) {
+        $('.one .swiper-slide:first-child .info-slide__head').addClass('hide-title');
         if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 2 && !oneSlider.activeIndex == 4) {
           $('.one-page .animate-img').addClass('hide-3 hide-4 hide-5 hide-6');
         } else if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 2 || oneSlider.activeIndex == 4) {
@@ -215,14 +217,17 @@ export default {
           $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6');
         }
       } else if (numberSlide == 2) {
+        $('.one .swiper-slide:first-child .info-slide__head').addClass('hide-title');
         if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 1 || oneSlider.activeIndex == 4) {
           $('.one-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6');
         } else {
           $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6');
         }
       } else if (numberSlide == 3) {
+        $('.one .swiper-slide:first-child .info-slide__head').addClass('hide-title');
         $('.one-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6');
       } else if (numberSlide == 4) {
+        $('.one .swiper-slide:first-child .info-slide__head').addClass('hide-title');
         if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 1 || oneSlider.activeIndex == 2) {
           $('.one-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6');
         } else {

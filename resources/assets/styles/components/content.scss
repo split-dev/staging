@@ -7,8 +7,8 @@
   .swiper-slide {
     &:first-child {
       .info-slide__head {
-        opacity: 1 !important;
-        transform: translateX(0) !important;
+        opacity: 1;
+        transform: translateX(0);
       }
     }
   }
@@ -78,6 +78,10 @@ p.desc {
     opacity: 0;
     transform: translateY(40px);
     transition: 0.5s;
+    &.hide-title {
+      opacity: 0 !important;
+      transform: translateY(-40px) !important;
+    }
     &.show-title {
       opacity: 1;
       transform: translateY(0);
