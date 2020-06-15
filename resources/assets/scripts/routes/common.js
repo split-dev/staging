@@ -94,8 +94,6 @@ export default {
       fullpage_api.moveTo(id);
     });
 
-    //width content
-    $('.fix-container').css('max-width', ($(window).height() + 240));
 
     //swiper swipe
     oneSlider.on('transitionStart', function () {
@@ -236,6 +234,11 @@ export default {
     }
 
 
+    $('.fix-container').css('max-width', ($(window).height() + 240));
+    $(window).resize(function() {
+      //width content
+      $('.fix-container').css('max-width', ($(window).height() + 240));
+    });
 
   },
 
