@@ -19,7 +19,7 @@ threeSlider.on('transitionStart', function () {
 
   setTimeout( function () {
     if (threeSlider.activeIndex === 0) {
-      $('.one .swiper-slide:first-child .info-slide__head').removeClass('hide-title');
+      $('.three .swiper-slide:first-child .info-slide__head').removeClass('hide-title');
       $('.three-page .animate-img').removeClass('hide-1 hide-2');
     } else if (threeSlider.activeIndex === 1) {
       $('.three-page .animate-img').removeClass('hide-3');
@@ -111,24 +111,24 @@ function nextSlide(numberSlide) {
   if (numberSlide == 0) {
     $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
   } else if (numberSlide == 1) {
-    $('.one .swiper-slide:first-child .info-slide__head').addClass('hide-title');
+    $('.three .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
   } else if (numberSlide == 2) {
-    $('.one .swiper-slide:first-child .info-slide__head').addClass('hide-title');
+    $('.three .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     if (threeSlider.activeIndex == 2 || threeSlider.activeIndex == 3 || threeSlider.activeIndex == 4) {
       $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5');
     } else {
       $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
     }
   } else if (numberSlide == 3) {
-    $('.one .swiper-slide:first-child .info-slide__head').addClass('hide-title');
+    $('.three .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     if (threeSlider.activeIndex == 2 || threeSlider.activeIndex == 3 || threeSlider.activeIndex == 4) {
       $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5');
     } else {
       $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
     }
   } else if (numberSlide == 4) {
-    $('.one .swiper-slide:first-child .info-slide__head').addClass('hide-title');
+    $('.three .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     if (threeSlider.activeIndex == 2 || threeSlider.activeIndex == 3 || threeSlider.activeIndex == 4) {
       $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5');
     } else {

@@ -19,7 +19,7 @@ fiveSlider.on('transitionStart', function () {
 
   setTimeout( function () {
     if (fiveSlider.activeIndex === 0) {
-      $('.one .swiper-slide:first-child .info-slide__head').removeClass('hide-title');
+      $('.five .swiper-slide:first-child .info-slide__head').removeClass('hide-title');
       $('.five-page .animate-img').removeClass('hide-1 hide-2');
     } else if (fiveSlider.activeIndex === 1) {
       $('.five-page .animate-img').removeClass('hide-3');

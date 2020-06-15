@@ -69,14 +69,14 @@ export default {
     });
 
     //hover menu
-    $( '#ILLUSTRATION > g:not(.cls-13)' ).hover(
+    $( '#Group-2 > g:not(.stairs)' ).hover(
       function() {
-        $( '#ILLUSTRATION > g' ).not($( this )).css( 'opacity', '0.1' );
+        $( '#Group-2 > g' ).not($( this )).css( 'opacity', '0.1' );
         let id = $( this ).attr('data-name');
         $(`[data-id="${id}"]`).css('opacity', '1');
         $('.bottom-box img').addClass('hide');
       }, function() {
-        $( '#ILLUSTRATION > g' ).css( 'opacity', '1' );
+        $( '#Group-2 > g' ).css( 'opacity', '1' );
         $('.bottom-box span').css('opacity', '0');
         $('.bottom-box img').removeClass('hide');
       }
@@ -88,9 +88,8 @@ export default {
       fullpage_api.moveSectionDown();
     });
 
-    $('#ILLUSTRATION > g:not(.cls-13)').click( function () {
+    $('#Group-2 > g:not(.cls-13)').click( function () {
       let id = Number($( this ).attr('data-name')) + 1;
-      console.log(id)
       // eslint-disable-next-line no-undef
       fullpage_api.moveTo(id);
     });
