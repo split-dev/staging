@@ -1,4 +1,4 @@
-.three-page {
+.four-page {
   outline: none;
   .oval {
     margin-right: 90px;
@@ -18,12 +18,12 @@
   .animate-img {
     max-height: 480px;
     max-width: 363px;
-    margin-right: 90px;
+    margin-left: 90px;
     @media (max-height: 768px) {
-      margin-right: 35px;
+      margin-left: 35px;
     }
     @media (min-height: 768px) {
-      margin-left: 18px;
+      margin-right: 18px;
     }
     img {
       transition: 0.5s;

@@ -10,6 +10,12 @@
 .color-4 {
   background-image: linear-gradient(160deg, #f482a3 0%, #ff9f81 70.77240000000002%, #ff9f81 100%);
 }
+.color-5 {
+  background-image: linear-gradient(160deg, #f8aec2 0%, #b9c0fa 99.91329999999999%, #b9c0fa 100%);
+}
+.color-6 {
+  background-image: linear-gradient(160deg, #9b98be 0%, #9b98be 0.20152400000000006%, #a2e2d5 88.93490000000001%, #a2e2d5 100%);
+}
 
 body {
   position: relative;
@@ -68,6 +74,14 @@ body {
 
 .oval-color-3 {
   background-color: #d97e8a;
+}
+
+.oval-color-4 {
+  background-color: #cc9bb8;
+}
+
+.oval-color-5 {
+  background-color: #87a5bc;
 }
 
 .section:not(.color-1) {

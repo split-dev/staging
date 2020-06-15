@@ -2,6 +2,8 @@ import fullpage from 'fullpage.js/dist/fullpage.min'
 import 'bootstrap'
 import './two-slider'
 import './three-slider'
+import './four-slider'
+import './five-slider'
 
 export default {
   init() {
@@ -71,10 +73,12 @@ export default {
       function() {
         $( '#ILLUSTRATION > g' ).not($( this )).css( 'opacity', '0.1' );
         let id = $( this ).attr('data-name');
-        $(`[data-id="${id}"]`).css('opacity', '1')
+        $(`[data-id="${id}"]`).css('opacity', '1');
+        $('.bottom-box img').addClass('hide');
       }, function() {
         $( '#ILLUSTRATION > g' ).css( 'opacity', '1' );
         $('.bottom-box span').css('opacity', '0');
+        $('.bottom-box img').removeClass('hide');
       }
     );
 
