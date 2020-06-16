@@ -234,11 +234,11 @@
   }
   #fp-nav.tooltip_alt ul li .fp-tooltip,
   #fp-nav.tooltip_alt ul li .fp-tooltip .tooltip-inner {
-    padding: 8px 7px;
+    padding: 0 7px;
+    height: 17px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
   }
