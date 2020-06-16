@@ -246,12 +246,13 @@ export default {
       let width = Number(arrayOval[i].getBoundingClientRect().width);
       let widthOval = width / 2;
       let summLeft = left + widthOval;
+      Math.ceil(summLeft);
 
 
       if (arraySvg[i].getAttribute('data-position') == 'left') {
         arraySvg[i].style.left = summLeft;
       } else {
-        arraySvg[i].style.left = Number(widthD - summLeft);
+        arraySvg[i].style.left = Math.ceil(widthD - summLeft);
       }
     }
     console.log(document.querySelector('.oval').getBoundingClientRect())
