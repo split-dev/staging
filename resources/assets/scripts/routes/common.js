@@ -261,6 +261,7 @@ export default {
       }
     }
 
+    console.log(navigator.platform);
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired
