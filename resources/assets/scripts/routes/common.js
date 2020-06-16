@@ -12,7 +12,7 @@ export default {
     let pag = $('.tooltip-split li');
 
     //width
-   //let width = $('body').width();
+   let widthD = $('body').width();
 
 
     new fullpage('#fullpage', {
@@ -234,11 +234,27 @@ export default {
     }
 
 
-    $('.fix-container').css('max-width', ($(window).height() + 240));
-    $(window).resize(function() {
-      //width content
-      $('.fix-container').css('max-width', ($(window).height() + 240));
-    });
+    let arrayOval = document.querySelectorAll('.oval');
+    // eslint-disable-next-line no-unused-vars
+    let arraySvg = document.querySelectorAll('.anim-svg');
+
+    console.log(document.querySelector('.oval-color-2').getBoundingClientRect())
+
+    for (let i = 0; i<arrayOval.length; i++) {
+      // eslint-disable-next-line no-unused-vars
+      let left = arrayOval[i].getBoundingClientRect().left;
+      let width = Number(arrayOval[i].getBoundingClientRect().width);
+      let widthOval = width / 2;
+      let summLeft = left + widthOval;
+
+
+      if (arraySvg[i].getAttribute('data-position') == 'left') {
+        arraySvg[i].style.left = summLeft;
+      } else {
+        arraySvg[i].style.left = Number(widthD - summLeft);
+      }
+    }
+    console.log(document.querySelector('.oval').getBoundingClientRect())
 
   },
 

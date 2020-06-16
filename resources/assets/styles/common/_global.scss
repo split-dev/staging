@@ -164,10 +164,4 @@ body {
   }
 }
 
-.fix-container {
-  .container {
-    @media (min-height: 768px) {
-      max-width: inherit;
-    }
-  }
-}
+
