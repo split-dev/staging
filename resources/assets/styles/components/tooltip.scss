@@ -210,7 +210,6 @@
     pointer-events: none;
     width: auto;
     opacity: 0;
-    padding: 0 10px;
     height: 17px;
     background-color: #fff;
     border-radius: 30px !important;
@@ -220,12 +219,8 @@
     text-align: center;
     color: #646464;
     font-size: 11px;
-    letter-spacing: -0.22px;
     transform: translateX(-10px);
     @include NexaReg;
-    span {
-      line-height: 16px;
-    }
   }
   #fp-nav.tooltip_alt ul li:hover {
     z-index: 100;
@@ -239,6 +234,11 @@
   }
   #fp-nav.tooltip_alt ul li .fp-tooltip,
   #fp-nav.tooltip_alt ul li .fp-tooltip .tooltip-inner {
+    padding: 8px 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
   }

@@ -1,7 +1,25 @@
 .fix-container {
-  @media (max-height: 768px) {
-    max-width: 962px;
+  @media (max-width: 1400px) and (min-height: 800px) {
+    max-width: 980px;
     margin: auto;
+  }
+  @media (max-width: 1250px) and (max-height: 850px) {
+    max-width: 895px;
+    margin: auto;
+  }
+  @media (max-width: 1300px) and (max-height: 768px) {
+    max-width: 970px;
+    margin: auto;
+  }
+  @media (max-width: 1100px) {
+    max-width: 840px;
+    margin: auto;
+  }
+}
+
+.animate-img {
+  @media (max-width: 1100px) {
+    transform: scale(0.8);
   }
 }
 
@@ -36,6 +54,9 @@ h1 {
   font-size: 34px;
   letter-spacing: 0.24px;
   @include NexaXBold;
+  @media (max-width: 1200px) {
+    font-size: 28px;
+  }
 }
 
 h3 {
@@ -44,6 +65,10 @@ h3 {
   letter-spacing: 0.24px;
   margin-top: 35px;
   @include NexaXBold;
+  @media (max-width: 1200px) {
+    font-size: 18px;
+    margin-top: 25px;
+  }
 }
 
 p.desc {
@@ -54,6 +79,10 @@ p.desc {
   letter-spacing: -0.36px;
   opacity: 0;
   transition: 0.5s;
+  @media (max-width: 1200px) {
+    font-size: 16px;
+    line-height: 21px;
+  }
   @include NexaReg;
   &.show {
     opacity: 1;
@@ -109,6 +138,11 @@ p.desc {
     margin-top: 14px;
     letter-spacing: -0.36px;
     @include NexaReg;
+    @media (max-width: 1200px) {
+      font-size: 15px;
+      line-height: 19px;
+      margin-top: 11px;
+    }
   }
   ul {
     li {
@@ -117,6 +151,11 @@ p.desc {
       line-height: 22px;
       letter-spacing: -0.36px;
       @include NexaReg;
+      @media (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 19px;
+      }
     }
   }
 }
+
