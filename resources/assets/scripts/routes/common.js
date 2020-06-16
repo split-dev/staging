@@ -32,28 +32,34 @@ export default {
         $(destination.item).find($('.anim-svg')).addClass('start');
         $(destination.item).find($('.animate-img')).addClass('start-zoom');
 
-        //width
-        let widthD = document.querySelector('body').getBoundingClientRect().width;
-        let arrayOval = document.querySelectorAll('.oval');
-        // eslint-disable-next-line no-unused-vars
-        let arraySvg = document.querySelectorAll('.anim-svg');
 
-        for (let i = 0; i<arrayOval.length; i++) {
+        function size() {
+          //width
+          let widthD = document.querySelector('body').getBoundingClientRect().width;
+          let arrayOval = document.querySelectorAll('.oval');
           // eslint-disable-next-line no-unused-vars
-          let left = arrayOval[i].getBoundingClientRect().left;
-          let width = Number(arrayOval[i].getBoundingClientRect().width);
-          let widthOval = width / 2;
-          let summLeft = left + widthOval;
-          Math.ceil(summLeft);
+          let arraySvg = document.querySelectorAll('.anim-svg');
+
+          for (let i = 0; i<arrayOval.length; i++) {
+            // eslint-disable-next-line no-unused-vars
+            let left = arrayOval[i].getBoundingClientRect().left;
+            let width = Number(arrayOval[i].getBoundingClientRect().width);
+            let widthOval = width / 2;
+            let summLeft = left + widthOval;
+            Math.ceil(summLeft);
 
 
-          if (arraySvg[i].getAttribute('data-position') == 'left') {
-            arraySvg[i].style.left = summLeft;
-          } else {
-            arraySvg[i].style.left = Math.ceil(widthD - summLeft);
-            console.log(widthD)
+            if (arraySvg[i].getAttribute('data-position') == 'left') {
+              arraySvg[i].style.left = summLeft;
+            } else {
+              arraySvg[i].style.left = Math.ceil(widthD - summLeft);
+            }
           }
         }
+        size();
+        $(window).on('resize', function () {
+          size();
+        });
 
         //animate-start
         if (destination.index == 1) {
