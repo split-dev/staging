@@ -11,8 +11,7 @@ export default {
     //pagination
     let pag = $('.tooltip-split li');
 
-    //width
-   let widthD = $('body').width();
+
 
 
     new fullpage('#fullpage', {
@@ -32,6 +31,29 @@ export default {
       afterLoad: function(origin, destination, direction){
         $(destination.item).find($('.anim-svg')).addClass('start');
         $(destination.item).find($('.animate-img')).addClass('start-zoom');
+
+        //width
+        let widthD = document.querySelector('body').getBoundingClientRect().width;
+        let arrayOval = document.querySelectorAll('.oval');
+        // eslint-disable-next-line no-unused-vars
+        let arraySvg = document.querySelectorAll('.anim-svg');
+
+        for (let i = 0; i<arrayOval.length; i++) {
+          // eslint-disable-next-line no-unused-vars
+          let left = arrayOval[i].getBoundingClientRect().left;
+          let width = Number(arrayOval[i].getBoundingClientRect().width);
+          let widthOval = width / 2;
+          let summLeft = left + widthOval;
+          Math.ceil(summLeft);
+
+
+          if (arraySvg[i].getAttribute('data-position') == 'left') {
+            arraySvg[i].style.left = summLeft;
+          } else {
+            arraySvg[i].style.left = Math.ceil(widthD - summLeft);
+            console.log(widthD)
+          }
+        }
 
         //animate-start
         if (destination.index == 1) {
@@ -232,30 +254,6 @@ export default {
         }
       }
     }
-
-
-    let arrayOval = document.querySelectorAll('.oval');
-    // eslint-disable-next-line no-unused-vars
-    let arraySvg = document.querySelectorAll('.anim-svg');
-
-    console.log(document.querySelector('.oval-color-2').getBoundingClientRect())
-
-    for (let i = 0; i<arrayOval.length; i++) {
-      // eslint-disable-next-line no-unused-vars
-      let left = arrayOval[i].getBoundingClientRect().left;
-      let width = Number(arrayOval[i].getBoundingClientRect().width);
-      let widthOval = width / 2;
-      let summLeft = left + widthOval;
-      Math.ceil(summLeft);
-
-
-      if (arraySvg[i].getAttribute('data-position') == 'left') {
-        arraySvg[i].style.left = summLeft;
-      } else {
-        arraySvg[i].style.left = Math.ceil(widthD - summLeft);
-      }
-    }
-    console.log(document.querySelector('.oval').getBoundingClientRect())
 
   },
 
