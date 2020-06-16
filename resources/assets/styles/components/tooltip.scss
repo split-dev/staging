@@ -241,6 +241,9 @@
     align-items: center;
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
+    &.mac {
+      padding: 3px 7px 1px;
+    }
   }
   #fp-nav.tooltip ul li .fp-tooltip span {
     height: 18px;

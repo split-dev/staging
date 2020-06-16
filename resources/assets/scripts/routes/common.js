@@ -261,7 +261,12 @@ export default {
       }
     }
 
-    console.log(navigator.platform);
+    let platform = navigator.platform;
+    if (platform == 'Win32') {
+      return;
+    } else if (platform == 'MacIntel') {
+      $('.fp-tooltip .tooltip-inner').addClass('mac');
+    }
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired
