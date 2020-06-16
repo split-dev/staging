@@ -266,6 +266,7 @@ export default {
       return;
     } else if (platform == 'MacIntel') {
       $('.fp-tooltip .tooltip-inner').addClass('mac');
+      $('.bottom-box').addClass('mac');
     }
   },
 

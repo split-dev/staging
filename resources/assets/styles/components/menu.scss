@@ -58,6 +58,11 @@ svg {
   bottom: 36px;
   margin: auto;
   z-index: 5;
+  &.mac {
+    span {
+      padding: 6px 13px 1px !important;
+    }
+  }
   span {
     width: max-content;
     opacity: 0;
