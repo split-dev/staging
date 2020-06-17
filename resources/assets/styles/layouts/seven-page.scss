@@ -1,4 +1,4 @@
-.five-page {
+.seven-page {
   outline: none;
   .oval {
     margin-right: 90px;
@@ -31,47 +31,31 @@
     img {
       transition: 0.5s;
       &:first-of-type {
-        left: 18px;
-        top: 108px;
+        left: -52px;
+        top: 100px;
         transform: scale(0.7) translateX(0);
         opacity: 0;
       }
       &:nth-of-type(2) {
         right: 12px;
-        top: 182px;
+        top: 128px;
         transform: scale(0.7) translateX(0);
         opacity: 0;
       }
       &:nth-of-type(3) {
-        left: 35px;
+        left: 65px;
+        right: 83px;
         opacity: 1;
-        top: 107px;
+        margin: auto;
+        top: 77px;
       }
       &:nth-of-type(4) {
-        right: 17px;
-        top: 107px;
+        left: -25px;
+        top: 115px;
       }
       &:nth-of-type(5) {
-        transform: scale(1) translateX(0);
-        left: 0;
-        top: 59px;
-      }
-      &:nth-of-type(6) {
-        left: 50px;
-        top: 131px;
-      }
-      &:nth-of-type(7) {
-        right: 51px;
-        top: 98px;
-      }
-      &:nth-of-type(8) {
         right: 30px;
         top: 100px;
-        z-index: 3;
-      }
-      &:nth-of-type(9) {
-        right: -9px;
-        top: 138px;
       }
     }
     &.start-zoom {
@@ -121,7 +105,7 @@
     &.hide-5 {
       img {
         &:nth-of-type(5) {
-          transform: scale(0.7) translateX(0);
+          transform: scale(1) translateX(30px);
           opacity: 0;
         }
       }
@@ -130,30 +114,6 @@
       img {
         &:nth-of-type(6) {
           transform: scale(1) translateX(30px);
-          opacity: 0;
-        }
-      }
-    }
-    &.hide-7 {
-      img {
-        &:nth-of-type(7) {
-          transform: scale(1) translateX(-30px);
-          opacity: 0;
-        }
-      }
-    }
-    &.hide-8 {
-      img {
-        &:nth-of-type(8) {
-          transform: scale(1) translateX(30px);
-          opacity: 0;
-        }
-      }
-    }
-    &.hide-9 {
-      img {
-        &:nth-of-type(9) {
-          transform: scale(1) translateX(-30px);
           opacity: 0;
         }
       }
