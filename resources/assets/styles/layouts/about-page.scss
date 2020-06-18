@@ -29,16 +29,11 @@
     }
     p {
       color: #414042;
-      font-size: 15px;
-      line-height: 22px;
+      font-size: 13px;
+      line-height: 16px;
       margin-top: 14px;
       letter-spacing: -0.36px;
       @include NexaReg;
-      @media (max-width: 1200px) {
-        font-size: 15px;
-        line-height: 19px;
-        margin-top: 11px;
-      }
     }
     > a {
       padding-top: 4px;
@@ -60,12 +55,25 @@
       margin-top: 30px;
       li {
         display: flex;
-        justify-content: space-between;
         margin-bottom: 30px;
+        &:first-of-type {
+          .about__logo {
+            margin-right: 45px;
+          }
+        }
+        &:nth-child(2) {
+          .about__logo {
+            margin-right: 35px;
+          }
+        }
+        &:nth-child(3) {
+          .about__logo {
+            margin-right: 54px;
+          }
+        }
         p {
           max-width: 410px;
           margin-top: 0;
-          line-height: 20px;
           a {
             display: block;
             color: #000;
@@ -98,8 +106,5 @@
       line-height: 16px;
       @include NexaReg;
     }
-  }
-  &__logo {
-    margin-right: 35px;
   }
 }

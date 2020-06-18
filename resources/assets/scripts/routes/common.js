@@ -290,11 +290,12 @@ export default {
 
     let platform = navigator.platform;
     if (platform == 'Win32') {
-      return;
+      $('.bottom-box').removeClass('mac');
     } else if (platform == 'MacIntel') {
       $('.fp-tooltip .tooltip-inner').addClass('mac');
       $('.bottom-box').addClass('mac');
     }
+
 
     //modal
     $('.button-abs').click(function (e) {
@@ -302,7 +303,7 @@ export default {
       let modal = $(this).attr('data-modal');
       $('.wrapper').addClass('show');
       $(modal).addClass('show');
-    })
+    });
 
       //close
     $('.close').click( function (e) {
