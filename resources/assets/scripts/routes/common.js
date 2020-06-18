@@ -6,6 +6,7 @@ import './four-slider'
 import './five-slider'
 import './six-slider'
 import './seven-slider'
+import './buttons'
 
 export default {
   init() {
@@ -298,7 +299,7 @@ export default {
 
 
     //modal
-    $('.button-abs').click(function (e) {
+    $('.button_su_inner.modal-btn').click(function (e) {
       e.preventDefault();
       let modal = $(this).attr('data-modal');
       $('.wrapper').addClass('show');

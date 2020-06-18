@@ -51,6 +51,13 @@
       border-radius: 30px;
       @include NexaReg;
     }
+    .button_su {
+      max-width: 130px;
+      margin-top: 21px;
+      visibility: visible;
+      opacity: 1;
+      position: relative;
+    }
     ul {
       margin-top: 30px;
       li {
