@@ -118,14 +118,19 @@ $('.five .arrow-right, .five .arrow-left, .five .navigation-pag li').click(funct
 function nextSlide(numberSlide) {
   if (numberSlide == 0) {
     $('.five-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7 hide-8 hide-9');
+    $('.five-page .animate-img .button-abs').removeClass('vis');
   } else if (numberSlide == 1) {
     $('.five-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7 hide-8 hide-9');
+    $('.five-page .animate-img .button-abs').removeClass('vis');
   } else if (numberSlide == 2) {
     $('.five-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7 hide-8 hide-9');
+    $('.five-page .animate-img .button-abs').addClass('vis');
   } else if (numberSlide == 3) {
     $('.five-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7 hide-8 hide-9');
+    $('.five-page .animate-img .button-abs').removeClass('vis');
   } else if (numberSlide == 4) {
     $('.five-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7 hide-8 hide-9');
+    $('.five-page .animate-img .button-abs').removeClass('vis');
   }
 }
 

@@ -295,6 +295,32 @@ export default {
       $('.fp-tooltip .tooltip-inner').addClass('mac');
       $('.bottom-box').addClass('mac');
     }
+
+    //modal
+    $('.button-abs').click(function (e) {
+      e.preventDefault();
+      let modal = $(this).attr('data-modal');
+      $('.wrapper').addClass('show');
+      $(modal).addClass('show');
+    })
+
+      //close
+    $('.close').click( function (e) {
+      e.preventDefault();
+      $('.wrapper .show').removeClass('show');
+      $('.wrapper').removeClass('show');
+    });
+
+    $(function($){
+      $(document).mouseup(function (e){
+        var div = $('.modal-box.show');
+        if (!div.is(e.target)
+          && div.has(e.target).length === 0) {
+          $('.wrapper .show').removeClass('show');
+          $('.wrapper').removeClass('show');
+        }
+      });
+    });
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired
