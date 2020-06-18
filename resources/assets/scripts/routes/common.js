@@ -13,6 +13,8 @@ export default {
     //pagination
     let pag = $('.tooltip-split li');
 
+    let last = 0;
+
 
 
 
@@ -49,7 +51,9 @@ export default {
             let widthOval = width / 2;
             let summLeft = left + widthOval;
             Math.ceil(summLeft);
-
+            let seven = document.querySelector('.seven-page .anim-svg').getBoundingClientRect().width;
+            last = (summLeft + seven) - 5;
+            $('.eight-page .anim-svg').css('left', last);
 
             if (arraySvg[i].getAttribute('data-position') == 'left') {
               arraySvg[i].style.left = summLeft;
@@ -59,6 +63,7 @@ export default {
           }
         }
         size();
+
         $(window).on('resize', function () {
           size();
         });
@@ -82,6 +87,9 @@ export default {
         } else if (destination.index == 6) {
           $(destination.item).find($('.six .info-slide__head .desc')).addClass('show');
           $(destination.item).find($('.six .navigation-six')).addClass('show');
+        } else if (destination.index == 7) {
+          $(destination.item).find($('.seven .info-slide__head .desc')).addClass('show');
+          $(destination.item).find($('.seven .navigation-six')).addClass('show');
         }
 
 

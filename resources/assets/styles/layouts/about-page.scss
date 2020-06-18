@@ -42,4 +42,14 @@
       @include NexaReg;
     }
   }
+  &__video {
+    width: 100%;
+    max-width: 395px;
+    height: 264px;
+    border: 2px solid #f1f2f2;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

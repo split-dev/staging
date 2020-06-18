@@ -22,13 +22,13 @@ sevenSlider.on('transitionStart', function () {
       $('.seven .swiper-slide:first-child .info-slide__head').removeClass('hide-title');
       $('.seven-page .animate-img').removeClass('hide-1 hide-2');
     } else if (sevenSlider.activeIndex === 1) {
-      $('.seven-page .animate-img').removeClass('hide-3');
+      $('.seven-page .animate-img').removeClass('hide-1 hide-3');
     } else if (sevenSlider.activeIndex === 2) {
-      $('.seven-page .animate-img').removeClass('hide-4');
+      $('.seven-page .animate-img').removeClass('hide-4 hide-5');
     } else if (sevenSlider.activeIndex === 3) {
-      $('.seven-page .animate-img').removeClass('hide-4 hide-5');
+      $('.seven-page .animate-img').removeClass('hide-1 hide-6');
     }  else if (sevenSlider.activeIndex === 4) {
-      $('.seven-page .animate-img').removeClass('hide-4 hide-5');
+      $('.seven-page .animate-img').removeClass('hide-1 hide-7');
     }
   }, 400);
 
@@ -116,27 +116,15 @@ $('.seven .arrow-right, .seven .arrow-left, .seven .navigation-pag li').click(fu
 });
 function nextSlide(numberSlide) {
   if (numberSlide == 0) {
-    $('.seven-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
+    $('.seven-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
   } else if (numberSlide == 1) {
-    $('.seven-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
+    $('.seven-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
   } else if (numberSlide == 2) {
-    if (sevenSlider.activeIndex == 2 || sevenSlider.activeIndex == 3 || sevenSlider.activeIndex == 4) {
-      $('.seven-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5');
-    } else {
-      $('.seven-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
-    }
+    $('.seven-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
   } else if (numberSlide == 3) {
-    if (sevenSlider.activeIndex == 2 || sevenSlider.activeIndex == 3 || sevenSlider.activeIndex == 4) {
-      $('.seven-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5');
-    } else {
-      $('.seven-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
-    }
+    $('.seven-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
   } else if (numberSlide == 4) {
-    if (sevenSlider.activeIndex == 2 || sevenSlider.activeIndex == 3 || sevenSlider.activeIndex == 4) {
-      $('.seven-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5');
-    } else {
-      $('.seven-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
-    }
+    $('.seven-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
   }
 }
 
