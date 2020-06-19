@@ -88,6 +88,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &.mac {
+    padding-top: 4px;
+  }
 }
 
 .explode-circle {

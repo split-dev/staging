@@ -117,6 +117,9 @@ $('.two .arrow-right, .two .arrow-left, .two .navigation-pag li').click(function
 
 function nextSlide(numberSlide) {
   if (numberSlide == 0) {
+    setTimeout( function () {
+      $('.two .swiper-container .swiper-slide .info-slide__head').removeClass('show-title');
+    }, 200);
     if (twoSlider.activeIndex == 0 || twoSlider.activeIndex == 1) {
       $('.two-page .animate-img').addClass('hide-3 hide-4 hide-5 hide-6 hide-7');
     } else {

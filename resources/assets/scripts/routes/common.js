@@ -27,7 +27,14 @@ export default {
 
       // eslint-disable-next-line no-unused-vars
       onLeave: function(index, nextIndex, direction) {
-        //console.log(index)
+        //line
+        let arraySvg = $('.anim-svg');
+        for (let i = 0; i<nextIndex.index; i++) {
+          setTimeout( function () {
+            $(arraySvg[i]).addClass('start');
+          }, 400)
+        }
+        console.log(nextIndex)
         $('.tooltip-split li a').removeClass('active');
         $(pag[nextIndex.index]).children('a').addClass('active');
       },
@@ -253,6 +260,9 @@ export default {
 
     function nextSlide(numberSlide) {
       if (numberSlide == 0) {
+        setTimeout( function () {
+          $('.one .swiper-container .swiper-slide .info-slide__head').removeClass('show-title');
+        }, 200);
         if (oneSlider.activeIndex == 1 || oneSlider.activeIndex == 2 && !oneSlider.activeIndex == 4) {
           $('.one-page .animate-img').addClass('hide-3 hide-4 hide-5 hide-6');
         } else if (oneSlider.activeIndex == 0 || oneSlider.activeIndex == 2 || oneSlider.activeIndex == 4) {
@@ -295,6 +305,7 @@ export default {
     } else if (platform == 'MacIntel') {
       $('.fp-tooltip .tooltip-inner').addClass('mac');
       $('.bottom-box').addClass('mac');
+      $('.button_text_container').addClass('mac');
     }
 
 
@@ -323,6 +334,7 @@ export default {
         }
       });
     });
+
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired

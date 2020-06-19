@@ -33,7 +33,7 @@ svg {
     display: flex;
     align-items: flex-end;
     @media (min-height: 740px) {
-      margin-top: 70px;
+      margin-top: 20px;
     }
     svg {
       width: 100%;
@@ -85,11 +85,11 @@ svg {
     @include NexaBold;
     &:first-of-type {
       background-color: transparent;
-      font-size: 12px;
+      font-size: 15px;
       color: #fff;
       opacity: 1 !important;
       z-index: 0;
-      @include NexaReg;
+      @include NexaBold;
     }
   }
   img {

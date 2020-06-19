@@ -117,6 +117,9 @@ $('.six .arrow-right, .six .arrow-left, .six .navigation-pag li').click(function
 
 function nextSlide(numberSlide) {
   if (numberSlide == 0) {
+    setTimeout( function () {
+      $('.six .swiper-container .swiper-slide .info-slide__head').removeClass('show-title');
+    }, 200);
     $('.six .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     $('.six-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7 hide-8 hide-9');
     $('.six-page .animate-img .button_su').removeClass('vis');
