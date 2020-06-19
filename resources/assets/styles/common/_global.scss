@@ -36,6 +36,9 @@ body {
 
 .section {
   overflow: hidden;
+  @media (max-width: 1023px) {
+    overflow: visible;
+  }
 }
 
 .anim-svg {
@@ -62,6 +65,9 @@ body {
   @media (max-width: 1200px) {
     max-width: 483px;
     width: 100%;
+  }
+  @media (max-width: 1023px) {
+    display: none !important;
   }
 }
 
@@ -238,6 +244,17 @@ body {
   img {
     pointer-events: none !important;
   }
+}
+
+.container {
+  @media (max-width: 1023px) {
+    max-width: 875px;
+  }
+}
+
+//box size
+.box-1 {
+  height: 100vh;
 }
 
 

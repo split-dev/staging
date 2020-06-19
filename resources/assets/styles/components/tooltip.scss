@@ -1,4 +1,7 @@
 .tooltip-split {
+  @media (max-width: 1023px) {
+    display: none !important;
+  }
   #fp-nav {
     top: 0;
     bottom: 0;

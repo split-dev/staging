@@ -17,6 +17,9 @@
   .anim-svg {
     position: absolute;
     max-width: 5px !important;
+    @media (max-width: 1023px) {
+      display: none;
+    }
   }
 }
 .about {

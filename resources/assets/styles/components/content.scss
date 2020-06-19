@@ -15,6 +15,11 @@
     max-width: 840px;
     margin: auto;
   }
+  @media (max-width: 1023px) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .animate-img {
@@ -83,6 +88,9 @@ p.desc {
     font-size: 16px;
     line-height: 21px;
   }
+  @media (max-width: 1024px) {
+    opacity: 1;
+  }
   @include NexaReg;
   &.show {
     opacity: 1;
@@ -109,6 +117,9 @@ p.desc {
     opacity: 0;
     transform: translateY(40px);
     transition: 0.5s;
+    @media (max-width: 1023px) {
+      display: none;
+    }
     &.hide-title {
       opacity: 0 !important;
       transform: translateY(-40px) !important;
