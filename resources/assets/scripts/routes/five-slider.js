@@ -8,7 +8,14 @@ var fiveSlider = new Swiper('.swiper-container-five', {
 });
 
 //swiper swipe
+let arraySlide = $('.five-page .swiper-wrapper .swiper-slide');
+let arraySize = [];
+for (let i = 0; i<arraySlide.length; i++) {
+  arraySize[i] = $(arraySlide[i]).height() + 20;
+}
+$('.five-page .swiper-wrapper').css('height', arraySize[0]);
 fiveSlider.on('transitionStart', function () {
+  $('.five-page .swiper-wrapper').css('height', arraySize[fiveSlider.activeIndex]);
   if(fiveSlider.activeIndex > 0) {
     setTimeout( function () {
       $('.five .swiper-container .swiper-slide .info-slide__head').addClass('show-title')
@@ -52,10 +59,18 @@ fiveSlider.on('transitionStart', function () {
     }
   }
 
+  if (fiveSlider.activeIndex > 0 && fiveSlider.activeIndex < 4) {
+    $('.five-page .animate-img .arrow-left').removeClass('hide');
+    $('.five-page .animate-img .arrow-right').removeClass('hide');
+  } else if (fiveSlider.activeIndex == 4) {
+    $('.five-page .animate-img .arrow-right').addClass('hide');
+  } else if (fiveSlider.activeIndex == 0) {
+    $('.five-page .animate-img .arrow-left').addClass('hide');
+  }
 });
 
 //arrow click
-$('.five .arrow-left').click( function () {
+$('.five-page .arrow-left').click( function () {
   if (fiveSlider.activeIndex > 0) {
     $('.swiper-container-five .swiper-slide-prev .info-slide__other').addClass('fade-left');
     $('.five .swiper-slide-active .info-slide__other').addClass('fade-right');
@@ -65,7 +80,7 @@ $('.five .arrow-left').click( function () {
   }
 });
 
-$('.five .arrow-right').click( function () {
+$('.five-page .arrow-right').click( function () {
   console.log(fiveSlider.activeIndex)
   if (fiveSlider.activeIndex < 4) {
     $('.five .swiper-slide-active .info-slide__other').addClass('fade-left');
@@ -97,7 +112,7 @@ $('.five .navigation-pag li').click( function () {
 });
 
 //img animation
-$('.five .arrow-right, .five .arrow-left, .five .navigation-pag li').click(function () {
+$('.five-page .arrow-right, .five-page .arrow-left, .five-page .navigation-pag li').click(function () {
   if ($(this).hasClass('active')) {
     return;
   } else {

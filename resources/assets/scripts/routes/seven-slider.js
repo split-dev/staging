@@ -8,7 +8,14 @@ var sevenSlider = new Swiper('.swiper-container-seven', {
 });
 
 //swiper swipe
+let arraySlide = $('.seven-page .swiper-wrapper .swiper-slide');
+let arraySize = [];
+for (let i = 0; i<arraySlide.length; i++) {
+  arraySize[i] = $(arraySlide[i]).height() + 20;
+}
+$('.seven-page .swiper-wrapper').css('height', arraySize[0]);
 sevenSlider.on('transitionStart', function () {
+  $('.seven-page .swiper-wrapper').css('height', arraySize[sevenSlider.activeIndex]);
   if(sevenSlider.activeIndex > 0) {
     setTimeout( function () {
       $('.seven .swiper-container .swiper-slide .info-slide__head').addClass('show-title')
@@ -52,10 +59,19 @@ sevenSlider.on('transitionStart', function () {
     }
   }
 
+
+  if (sevenSlider.activeIndex > 0 && sevenSlider.activeIndex < 4) {
+    $('.seven-page .animate-img .arrow-left').removeClass('hide');
+    $('.seven-page .animate-img .arrow-right').removeClass('hide');
+  } else if (sevenSlider.activeIndex == 4) {
+    $('.seven-page .animate-img .arrow-right').addClass('hide');
+  } else if (sevenSlider.activeIndex == 0) {
+    $('.seven-page .animate-img .arrow-left').addClass('hide');
+  }
 });
 
 //arrow click
-$('.seven .arrow-left').click( function () {
+$('.seven-page .arrow-left').click( function () {
   if (sevenSlider.activeIndex > 0) {
     $('.swiper-container-seven .swiper-slide-prev .info-slide__other').addClass('fade-left');
     $('.seven .swiper-slide-active .info-slide__other').addClass('fade-right');
@@ -65,7 +81,7 @@ $('.seven .arrow-left').click( function () {
   }
 });
 
-$('.seven .arrow-right').click( function () {
+$('.seven-page .arrow-right').click( function () {
   console.log(sevenSlider.activeIndex)
   if (sevenSlider.activeIndex < 4) {
     $('.seven .swiper-slide-active .info-slide__other').addClass('fade-left');
@@ -97,7 +113,7 @@ $('.seven .navigation-pag li').click( function () {
 });
 
 //img animation
-$('.seven .arrow-right, .seven .arrow-left, .seven .navigation-pag li').click(function () {
+$('.seven-page .arrow-right, .seven-page .arrow-left, .seven-page .navigation-pag li').click(function () {
   if ($(this).hasClass('active')) {
     return;
   } else {

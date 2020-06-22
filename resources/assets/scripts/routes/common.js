@@ -7,6 +7,7 @@ import './five-slider'
 import './six-slider'
 import './seven-slider'
 import './buttons'
+import './mobile'
 
 export default {
   init() {
@@ -150,8 +151,15 @@ export default {
     });
 
 
+    let arraySlide = $('.one-page .swiper-wrapper .swiper-slide');
+    let arraySize = [];
+    for (let i = 0; i<arraySlide.length; i++) {
+      arraySize[i] = $(arraySlide[i]).height() + 20;
+    }
+    $('.one-page .swiper-wrapper').css('height', arraySize[0]);
     //swiper swipe
     oneSlider.on('transitionStart', function () {
+      $('.one-page .swiper-wrapper').css('height', arraySize[oneSlider.activeIndex]);
       if(oneSlider.activeIndex > 0) {
         setTimeout( function () {
           $('.one .swiper-container .swiper-slide .info-slide__head').addClass('show-title')
@@ -195,10 +203,18 @@ export default {
         }
       }
 
+      if (oneSlider.activeIndex > 0 && oneSlider.activeIndex < 4) {
+        $('.one-page .animate-img .arrow-left').removeClass('hide');
+        $('.one-page .animate-img .arrow-right').removeClass('hide');
+      } else if (oneSlider.activeIndex == 4) {
+        $('.one-page .animate-img .arrow-right').addClass('hide');
+      } else if (oneSlider.activeIndex == 0) {
+        $('.one-page .animate-img .arrow-left').addClass('hide');
+      }
     });
 
     //arrow click
-    $('.one .arrow-left').click( function () {
+    $('.one-page .arrow-left').click( function () {
       if (oneSlider.activeIndex > 0) {
         $('.swiper-container-one .swiper-slide-prev .info-slide__other').addClass('fade-left');
         $('.one .swiper-slide-active .info-slide__other').addClass('fade-right');
@@ -208,7 +224,7 @@ export default {
       }
     });
 
-    $('.one .arrow-right').click( function () {
+    $('.one-page .arrow-right').click( function () {
       console.log(oneSlider.activeIndex)
       if (oneSlider.activeIndex < 4) {
         $('.one .swiper-slide-active .info-slide__other').addClass('fade-left');
@@ -240,7 +256,7 @@ export default {
     });
 
     //img animation
-    $('.one .arrow-right, .one .arrow-left, .one .navigation-pag li').click(function () {
+    $('.one-page .arrow-right, .one-page .arrow-left, .one-page .navigation-pag li').click(function () {
       if ($(this).hasClass('active')) {
         return;
       } else {

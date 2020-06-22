@@ -8,7 +8,14 @@ var fourSlider = new Swiper('.swiper-container-four', {
 });
 
 //swiper swipe
+let arraySlide = $('.four-page .swiper-wrapper .swiper-slide');
+let arraySize = [];
+for (let i = 0; i<arraySlide.length; i++) {
+  arraySize[i] = $(arraySlide[i]).height() + 20;
+}
+$('.four-page .swiper-wrapper').css('height', arraySize[0]);
 fourSlider.on('transitionStart', function () {
+  $('.four-page .swiper-wrapper').css('height', arraySize[fourSlider.activeIndex]);
   if(fourSlider.activeIndex > 0) {
     setTimeout( function () {
       $('.four .swiper-container .swiper-slide .info-slide__head').addClass('show-title')
@@ -52,6 +59,15 @@ fourSlider.on('transitionStart', function () {
     }
   }
 
+
+  if (fourSlider.activeIndex > 0 && fourSlider.activeIndex < 4) {
+    $('.four-page .animate-img .arrow-left').removeClass('hide');
+    $('.four-page .animate-img .arrow-right').removeClass('hide');
+  } else if (fourSlider.activeIndex == 4) {
+    $('.four-page .animate-img .arrow-right').addClass('hide');
+  } else if (fourSlider.activeIndex == 0) {
+    $('.four-page .animate-img .arrow-left').addClass('hide');
+  }
 });
 
 //arrow click
@@ -65,7 +81,7 @@ $('.four .arrow-left').click( function () {
   }
 });
 
-$('.four .arrow-right').click( function () {
+$('.four-page .arrow-right').click( function () {
   console.log(fourSlider.activeIndex)
   if (fourSlider.activeIndex < 4) {
     $('.four .swiper-slide-active .info-slide__other').addClass('fade-left');
@@ -77,7 +93,7 @@ $('.four .arrow-right').click( function () {
 });
 
 //pag click
-$('.four .navigation-pag li').click( function () {
+$('.four-page .navigation-pag li').click( function () {
   let el = $(this).attr('data-number');
   let active = fourSlider.activeIndex;
   if (el == active) {
@@ -97,7 +113,7 @@ $('.four .navigation-pag li').click( function () {
 });
 
 //img animation
-$('.four .arrow-right, .four .arrow-left, .four .navigation-pag li').click(function () {
+$('.four-page .arrow-right, .four-page .arrow-left, .four-page .navigation-pag li').click(function () {
   if ($(this).hasClass('active')) {
     return;
   } else {

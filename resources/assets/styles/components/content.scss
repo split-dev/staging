@@ -19,12 +19,57 @@
     height: 100%;
     display: flex;
     align-items: center;
+    .row {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
 .animate-img {
   @media (max-width: 1200px) {
     transform: scale(0.8);
+  }
+  @media (max-width: 1023px) {
+    order: 1;
+    margin: auto !important;
+    img {
+      margin-top: -15%;
+      zoom: 0.8;
+    }
+  }
+  .arrow-left {
+    max-height: 26px;
+    position: absolute;
+    left: -45px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 0.3s;
+    transform: translateX(0);
+    @media (min-width: 1023px) {
+      display: none;
+    }
+    &.hide {
+      opacity: 0;
+    }
+  }
+  .arrow-right {
+    max-height: 26px;
+    position: absolute;
+    right: -45px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 0.3s;
+    transform: translateX(0);
+    @media (min-width: 1023px) {
+      display: none;
+    }
+    &.hide {
+      opacity: 0;
+    }
   }
 }
 
@@ -74,6 +119,11 @@ h3 {
     font-size: 18px;
     margin-top: 25px;
   }
+  @media (max-width: 1023px) {
+    font-size: 21px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 p.desc {
@@ -90,6 +140,9 @@ p.desc {
   }
   @media (max-width: 1024px) {
     opacity: 1;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
   }
   @include NexaReg;
   &.show {
@@ -118,7 +171,11 @@ p.desc {
     transform: translateY(40px);
     transition: 0.5s;
     @media (max-width: 1023px) {
-      display: none;
+      > h2,
+      h1,
+      img {
+        display: none;
+      }
     }
     &.hide-title {
       opacity: 0 !important;
@@ -132,6 +189,10 @@ p.desc {
   &__other {
     min-height: 415px;
     transition: 0.5s;
+    @media (max-width: 1023px) {
+      min-height: auto;
+      text-align: center;
+    }
     &.fade-left {
       opacity: 0 !important;
       transform: translateX(-30px) !important;
@@ -154,6 +215,10 @@ p.desc {
       line-height: 19px;
       margin-top: 11px;
     }
+    @media (max-width: 1023px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
     > a {
       text-decoration: underline;
       color: black;
@@ -169,6 +234,10 @@ p.desc {
       @media (max-width: 1200px) {
         font-size: 15px;
         line-height: 19px;
+      }
+      @media (max-width: 1023px) {
+        font-size: 18px;
+        line-height: 22px;
       }
     }
   }

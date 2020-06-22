@@ -8,7 +8,14 @@ var threeSlider = new Swiper('.swiper-container-three', {
 });
 
 //swiper swipe
+let arraySlide = $('.three-page .swiper-wrapper .swiper-slide');
+let arraySize = [];
+for (let i = 0; i<arraySlide.length; i++) {
+  arraySize[i] = $(arraySlide[i]).height() + 20;
+}
+$('.three-page .swiper-wrapper').css('height', arraySize[0]);
 threeSlider.on('transitionStart', function () {
+  $('.three-page .swiper-wrapper').css('height', arraySize[threeSlider.activeIndex]);
   if(threeSlider.activeIndex > 0) {
     setTimeout( function () {
       $('.three .swiper-container .swiper-slide .info-slide__head').addClass('show-title')
@@ -52,10 +59,19 @@ threeSlider.on('transitionStart', function () {
     }
   }
 
+
+  if (threeSlider.activeIndex > 0 && threeSlider.activeIndex < 4) {
+    $('.three-page .animate-img .arrow-left').removeClass('hide');
+    $('.three-page .animate-img .arrow-right').removeClass('hide');
+  } else if (threeSlider.activeIndex == 4) {
+    $('.three-page .animate-img .arrow-right').addClass('hide');
+  } else if (threeSlider.activeIndex == 0) {
+    $('.three-page .animate-img .arrow-left').addClass('hide');
+  }
 });
 
 //arrow click
-$('.three .arrow-left').click( function () {
+$('.three-page .arrow-left').click( function () {
   if (threeSlider.activeIndex > 0) {
     $('.swiper-container-three .swiper-slide-prev .info-slide__other').addClass('fade-left');
     $('.three .swiper-slide-active .info-slide__other').addClass('fade-right');
@@ -65,7 +81,7 @@ $('.three .arrow-left').click( function () {
   }
 });
 
-$('.three .arrow-right').click( function () {
+$('.three-page .arrow-right').click( function () {
   console.log(threeSlider.activeIndex)
   if (threeSlider.activeIndex < 4) {
     $('.three .swiper-slide-active .info-slide__other').addClass('fade-left');
@@ -97,7 +113,7 @@ $('.three .navigation-pag li').click( function () {
 });
 
 //img animation
-$('.three .arrow-right, .three .arrow-left, .three .navigation-pag li').click(function () {
+$('.three-page .arrow-right, .three-page .arrow-left, .three-page .navigation-pag li').click(function () {
   if ($(this).hasClass('active')) {
     return;
   } else {
