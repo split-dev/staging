@@ -1,6 +1,9 @@
 .color-1 {
   background-image: linear-gradient(160deg, #4d4f6d 0%, #4d4f6d 1.1420000000000001%, #5182ad 18.1888%, #5499b0 60.88350000000001%, #9cd2ad 99.9463%, #9cd2ad 100%);
   .container {
+    @media (max-height: 849px) {
+      padding-top: 40px;
+    }
     @media (min-height: 850px) {
       margin-top: -50px;
     }
