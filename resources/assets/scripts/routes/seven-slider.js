@@ -2,10 +2,15 @@
 //swiper swipe
 // eslint-disable-next-line no-undef,no-unused-vars
 var sevenSlider = new Swiper('.swiper-container-seven', {
+  init: false,
   speed: 0,
   onlyExternal:true,
   effect: 'fade',
 });
+
+sevenSlider.on('init', function() {alert('good')});
+// init Swiper
+sevenSlider.init();
 
 //swiper swipe
 let arraySlide = $('.seven-page .swiper-wrapper .swiper-slide');
@@ -86,7 +91,6 @@ $('.seven-page .arrow-left').click( function () {
 });
 
 $('.seven-page .arrow-right').click( function () {
-  console.log(sevenSlider.activeIndex)
   if (sevenSlider.activeIndex < 4) {
     $('.seven .swiper-slide-active .info-slide__other').addClass('fade-left');
     $('.swiper-container-seven .swiper-slide-next .info-slide__other').addClass('fade-right');
