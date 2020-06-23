@@ -52,10 +52,18 @@
       &:nth-of-type(4) {
         left: -25px;
         top: 115px;
+        @media (max-width: 1024px) {
+          left: 0;
+          top: 145px;
+        }
       }
       &:nth-of-type(5) {
         right: 30px;
         top: 100px;
+        @media (max-width: 1024px) {
+          right: 60px;
+          top: 120px;
+        }
       }
     }
     &.start-zoom {

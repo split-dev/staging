@@ -15,7 +15,6 @@ svg {
       font-size: 34px;
       letter-spacing: 0.27px;
       text-align: center;
-      padding-top: 50px;
       margin-bottom: 20px;
       @include NexaXBold;
     }
@@ -73,7 +72,7 @@ svg {
     width: max-content;
     opacity: 0;
     position: absolute;
-    top: -28px;
+    top: -40px;
     left: 0;
     right: 0;
     margin: 0 auto 29px;

@@ -339,7 +339,7 @@ export default {
 
 
     //modal
-    $('.button_su_inner.modal-btn').click(function (e) {
+    $('.button_su_inner.modal-btn, .about__video').click(function (e) {
       e.preventDefault();
       let modal = $(this).attr('data-modal');
       $('.wrapper').addClass('show');
