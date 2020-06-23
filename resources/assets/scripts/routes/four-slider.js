@@ -63,10 +63,14 @@ fourSlider.on('transitionStart', function () {
   if (fourSlider.activeIndex > 0 && fourSlider.activeIndex < 4) {
     $('.four-page .animate-img .arrow-left').removeClass('hide');
     $('.four-page .animate-img .arrow-right').removeClass('hide');
+    $('.navigation-four .arrow-left').removeClass('opacity');
+    $('.navigation-four .arrow-right').removeClass('opacity');
   } else if (fourSlider.activeIndex == 4) {
     $('.four-page .animate-img .arrow-right').addClass('hide');
+    $('.navigation-four .arrow-right').addClass('opacity');
   } else if (fourSlider.activeIndex == 0) {
     $('.four-page .animate-img .arrow-left').addClass('hide');
+    $('.navigation-four .arrow-left').addClass('opacity');
   }
 });
 

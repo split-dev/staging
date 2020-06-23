@@ -60,7 +60,7 @@ body {
   }
   @media (max-width: 1300px) and (max-height: 800px) {
     width: 100%;
-    max-width: 600px;
+    max-width: 615px;
   }
   @media (max-width: 1200px) {
     max-width: 483px;
@@ -187,6 +187,10 @@ body {
     &:hover {
       transform: translateX(-5px);
     }
+    &.opacity {
+      opacity: 0.5;
+      pointer-events: none;
+    }
   }
   .arrow-right {
     transition: 0.3s;
@@ -196,6 +200,10 @@ body {
     }
     &:hover {
       transform: translateX(5px);
+    }
+    &.opacity {
+      opacity: 0.5;
+      pointer-events: none;
     }
   }
   ul {
@@ -298,6 +306,26 @@ body {
   h1 {
     margin-top: 5px;
     margin-bottom: 10px;
+  }
+}
+.about-scroll {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 16px;
+  z-index: 9;
+  color: white !important;
+  text-decoration: none !important;
+  pointer-events: auto;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: 0.3s;
+  @include NexaReg;
+  @media (max-width: 1023px) {
+    display: none;
+  }
+  &.hide {
+    transform: translateY(-135px);
   }
 }
 

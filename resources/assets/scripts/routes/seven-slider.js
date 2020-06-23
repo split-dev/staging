@@ -49,7 +49,7 @@ sevenSlider.on('transitionStart', function () {
   //pagination
   let active = sevenSlider.activeIndex;
   let array = $('.seven .navigation-pag li');
-  $('.seven .navigation-pag li').removeClass('def active')
+  $('.seven .navigation-pag li').removeClass('def active');
   for (let i = 0; i <= active; i++) {
     if (i < active) {
       $(array[i]).addClass('def');
@@ -63,10 +63,14 @@ sevenSlider.on('transitionStart', function () {
   if (sevenSlider.activeIndex > 0 && sevenSlider.activeIndex < 4) {
     $('.seven-page .animate-img .arrow-left').removeClass('hide');
     $('.seven-page .animate-img .arrow-right').removeClass('hide');
+    $('.navigation-seven .arrow-left').removeClass('opacity');
+    $('.navigation-seven .arrow-right').removeClass('opacity');
   } else if (sevenSlider.activeIndex == 4) {
     $('.seven-page .animate-img .arrow-right').addClass('hide');
+    $('.navigation-seven .arrow-right').addClass('opacity');
   } else if (sevenSlider.activeIndex == 0) {
     $('.seven-page .animate-img .arrow-left').addClass('hide');
+    $('.navigation-seven .arrow-left').addClass('opacity');
   }
 });
 
