@@ -321,8 +321,22 @@ body {
   transform: translateY(0);
   transition: 0.3s;
   @include NexaReg;
-  @media (max-width: 1023px) {
+  @media (max-width: 1025px) {
     display: none;
+  }
+  &:after {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+    }
   }
   &.hide {
     transform: translateY(-135px);
