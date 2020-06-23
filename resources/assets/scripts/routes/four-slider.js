@@ -75,7 +75,7 @@ fourSlider.on('transitionStart', function () {
 });
 
 //arrow click
-$('.four .arrow-left').click( function () {
+$('.four-page .arrow-left').click( function () {
   if (fourSlider.activeIndex > 0) {
     $('.swiper-container-four .swiper-slide-prev .info-slide__other').addClass('fade-left');
     $('.four .swiper-slide-active .info-slide__other').addClass('fade-right');

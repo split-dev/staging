@@ -56,6 +56,9 @@
         transform: scale(1) translateX(0);
         left: 0;
         top: 59px;
+        @media (max-width: 1024px) {
+          zoom: 1;
+        }
       }
       &:nth-of-type(6) {
         left: 50px;
@@ -69,10 +72,16 @@
         right: 30px;
         top: 100px;
         z-index: 3;
+        @media (max-width: 1024px) {
+          right: 62px;
+        }
       }
       &:nth-of-type(9) {
         right: -9px;
         top: 138px;
+        @media (max-width: 1024px) {
+          right: 10px;
+        }
       }
     }
     &.start-zoom {

@@ -351,10 +351,14 @@ export default {
       e.preventDefault();
       $('.wrapper .show').removeClass('show');
       $('.wrapper').removeClass('show');
+      let srcAttr = $(this).parent().find($('iframe')).attr('src');
+      $(this).parent().find($('iframe')).attr('src', srcAttr);
     });
 
     $(function($){
       $(document).mouseup(function (e){
+        let srcAttr = $('.modal-box.show').find($('iframe')).attr('src');
+        $('.modal-box.show').find($('iframe')).attr('src', srcAttr);
         var div = $('.modal-box.show');
         if (!div.is(e.target)
           && div.has(e.target).length === 0) {
