@@ -165,6 +165,7 @@
         .video {
           position: relative;
           cursor: pointer;
+          width: 100%;
           &:before {
             content: url("images/about-img/play.svg");
             margin: auto;
