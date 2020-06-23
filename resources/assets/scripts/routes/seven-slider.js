@@ -8,7 +8,9 @@ var sevenSlider = new Swiper('.swiper-container-seven', {
   effect: 'fade',
 });
 
-sevenSlider.on('init', function() {alert('good')});
+sevenSlider.on('init', function() {
+  console.log('good')
+});
 // init Swiper
 sevenSlider.init();
 

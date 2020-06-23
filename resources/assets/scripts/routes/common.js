@@ -35,7 +35,6 @@ export default {
             $(arraySvg[i]).addClass('start');
           }, 400)
         }
-        console.log(nextIndex)
         $('.tooltip-split li a').removeClass('active');
         $(pag[nextIndex.index]).children('a').addClass('active');
       },
@@ -238,7 +237,6 @@ export default {
     });
 
     $('.one-page .arrow-right').click( function () {
-      console.log(oneSlider.activeIndex)
       if (oneSlider.activeIndex < 4) {
         $('.one .swiper-slide-active .info-slide__other').addClass('fade-left');
         $('.swiper-container-one .swiper-slide-next .info-slide__other').addClass('fade-right');
@@ -396,7 +394,6 @@ export default {
                 $(arraySvg[i]).addClass('start');
               }, 400)
             }
-            console.log(nextIndex)
             $('.tooltip-split li a').removeClass('active');
             $(pag[nextIndex.index]).children('a').addClass('active');
           },
