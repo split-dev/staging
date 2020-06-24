@@ -28,6 +28,27 @@
     position: absolute;
     margin: auto;
     content: url("images/support.svg");
+    transform: translate3d(0, 0, 0);
+    animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes example {
+    0%   {
+      transform: translate3d(0, -25px, 0);
+    }
+    25%  {
+      transform: translate3d(0, 25px, 0);
+    }
+    50%  {
+      transform: translate3d(0, -25px, 0);
+    }
+    75%  {
+      transform: translate3d(0, 25px, 0);
+    }
+    100% {
+      transform: translate3d(0, -25px, 0);
+    }
   }
 </style>
 

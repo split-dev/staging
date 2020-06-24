@@ -11,8 +11,11 @@ var sevenSlider = new Swiper('.swiper-container-seven', {
 sevenSlider.on('init', function() {
   setTimeout( function () {
     $('.load-page').fadeOut( 'slow', function() {});
-    $('body').addClass('load');
-  }, 500);
+    let widthD = document.querySelector('body').getBoundingClientRect().width;
+    if(widthD < 1023) {
+      $('body').addClass('load');
+    }
+  }, 800);
 });
 // init Swiper
 sevenSlider.init();
