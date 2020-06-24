@@ -71,6 +71,7 @@ svg {
     img {
       display: none;
       @media (max-width: 575px) {
+        width: 100%;
         display: block;
         margin: auto;
       }
