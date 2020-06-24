@@ -10,41 +10,49 @@
   padding: 0 30px;
   transition: 0.3s;
   transform: translateX(100%);
+  .close-nav {
+    padding-top: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 35px;
+  }
   &.open {
     transform: translateX(0);
     ul {
       li {
         transform: translateY(0) !important;
         opacity: 1 !important;
+        transition-delay: 300ms;
         &:first-child {
           transition-delay: 0s;
         }
         &:nth-child(2) {
-          transition-delay: 200ms;
+          transition-delay: 150ms;
         }
         &:nth-child(3) {
-          transition-delay: 400ms;
+          transition-delay: 300ms;
         }
         &:nth-child(4) {
-          transition-delay: 600ms;
+          transition-delay: 450ms;
         }
         &:nth-child(5) {
-          transition-delay: 800ms;
+          transition-delay: 600ms;
         }
         &:nth-child(6) {
-          transition-delay: 1s;
+          transition-delay: 750ms;
         }
         &:nth-child(7) {
-          transition-delay: 1.2s;
+          transition-delay: 800ms;
         }
         &:nth-child(8) {
-          transition-delay: 1.4s;
+          transition-delay: 950ms;
         }
         &:nth-child(9) {
-          transition-delay: 1.6s;
+          transition-delay: 1100ms;
         }
         &:nth-child(10) {
-          transition-delay: 1.8s;
+          transition-delay: 1250ms;
         }
       }
     }
