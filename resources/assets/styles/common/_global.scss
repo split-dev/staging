@@ -11,6 +11,9 @@
       margin-top: 0;
       padding-top: 80px;
     }
+    @media (max-width: 575px) {
+      padding-top: 55px;
+    }
   }
 }
 .color-2 {
@@ -114,10 +117,10 @@ body {
 .section {
   overflow: hidden;
   transform: translate3d(0, 0, 0);
-  @media (max-width: 1023px) {
+  /*@media (max-width: 1023px) {
     overflow: visible;
     transform: none !important;
-  }
+  }*/
 }
 
 .anim-svg {
@@ -374,6 +377,10 @@ body {
 //box size
 .box-1 {
   height: 100vh;
+  @media (max-width: 575px) {
+    height: auto;
+    padding-bottom: 123px;
+  }
 }
 
 .mob-title {
