@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="436.268" height="214.196" viewBox="0 0 436.268 214.196">
-  <defs>
-    <linearGradient id="linear-gradient" x1="3.696" y1="-0.344" x2="3.455" y2="0.147" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="0.012" stop-color="#fff" stop-opacity="0.992"/>
-      <stop offset="0.498" stop-color="#fff" stop-opacity="0.624"/>
-      <stop offset="0.837" stop-color="#fff" stop-opacity="0.388"/>
-      <stop offset="0.999" stop-color="#fff" stop-opacity="0.302"/>
-    </linearGradient>
-  </defs>
-  <path id="Path_23901" data-name="Path 23901" d="M1958.781,1747.05c-36.684,58.392-111.451,72.6-185.989,66.056-60.16-5.283-98.784,13.09-122.1,57.246-20.507,38.829-62.6,95.2-128.175,90.633V1747.05Z" transform="translate(-1522.513 -1747.05)" fill-rule="evenodd" opacity="0.2" fill="url(#linear-gradient)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="436.268" height="214.196" viewBox="0 0 436.268 214.196"><defs><linearGradient id="a" x1="3.696" y1="-.344" x2="3.455" y2=".147" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#fff"/><stop offset=".012" stop-color="#fff" stop-opacity=".992"/><stop offset=".498" stop-color="#fff" stop-opacity=".624"/><stop offset=".837" stop-color="#fff" stop-opacity=".388"/><stop offset=".999" stop-color="#fff" stop-opacity=".302"/></linearGradient></defs><path data-name="Path 23901" d="M1958.781 1747.05c-36.684 58.392-111.451 72.6-185.989 66.056-60.16-5.283-98.784 13.09-122.1 57.246-20.507 38.829-62.6 95.2-128.175 90.633V1747.05z" transform="translate(-1522.513 -1747.05)" fill-rule="evenodd" opacity=".2" fill="url(#a)"/></svg>
