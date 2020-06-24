@@ -9,7 +9,9 @@ var sevenSlider = new Swiper('.swiper-container-seven', {
 });
 
 sevenSlider.on('init', function() {
-  console.log('good')
+  setTimeout( function () {
+    $('.load-page').fadeOut( 'slow', function() {});
+  }, 500);
 });
 // init Swiper
 sevenSlider.init();

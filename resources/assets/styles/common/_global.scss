@@ -18,6 +18,9 @@
 }
 .color-3 {
   background-image: linear-gradient(160deg, #64d0eb 0%, #64d0eb 0.08504980000000004%, #e6eed6 100%);
+  .accordion .card .card-header .btn::before {
+    content: url("images/icon/arrow-1.svg");
+  }
 }
 .color-4 {
   background-image: linear-gradient(160deg, #f482a3 0%, #ff9f81 70.77240000000002%, #ff9f81 100%);
@@ -27,15 +30,27 @@
 }
 .color-5 {
   background-image: linear-gradient(160deg, #f8aec2 0%, #b9c0fa 99.91329999999999%, #b9c0fa 100%);
+  .accordion .card .card-header .btn::before {
+    content: url("images/icon/arrow-3.svg");
+  }
 }
 .color-6 {
   background-image: linear-gradient(160deg, #9b98be 0%, #9b98be 0.20152400000000006%, #a2e2d5 88.93490000000001%, #a2e2d5 100%);
+  .accordion .card .card-header .btn::before {
+    content: url("images/icon/arrow-4.svg");
+  }
 }
 .color-7 {
   background-image: linear-gradient(160deg, #f5bc72 0%, #f3e794 99.9149%, #f3e794 100%);
+  .accordion .card .card-header .btn::before {
+    content: url("images/icon/arrow-5.svg");
+  }
 }
 .color-8 {
   background-image: linear-gradient(160deg, #abbbf0 0%, #abbbf0 33.87100000000001%, #d8bcde 99.9444%, #d8bcde 100%);
+  .accordion .card .card-header .btn::before {
+    content: url("images/icon/arrow-6.svg");
+  }
 }
 .color-9 {
   background-image: linear-gradient(160deg, #cab2d9 0%, #cab2d9 0.04113310000000002%, #fff 84.9265%, #fff 100%);
