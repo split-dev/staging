@@ -10,6 +10,10 @@ svg {
 
 .menu {
   &__title {
+    @media (max-width: 575px) {
+      padding: 0 15px;
+      margin-top: 15px;
+    }
     h1 {
       color: #fff;
       font-size: 34px;
@@ -17,6 +21,15 @@ svg {
       text-align: center;
       margin-bottom: 20px;
       @include NexaXBold;
+      @media (max-width: 767px) {
+        br {
+          display: none;
+        }
+      }
+      @media (max-width: 575px) {
+        font-size: 27px;
+        line-height: 32px;
+      }
     }
     p {
       color: #fff;
@@ -25,6 +38,9 @@ svg {
       letter-spacing: -0.32px;
       text-align: center;
       @include NexaReg;
+      @media (max-width: 575px) {
+        display: none;
+      }
     }
   }
   &__svg {
@@ -45,6 +61,16 @@ svg {
       }
       @media (max-width: 1023px) {
         transform: scale(1) !important;
+      }
+      @media (max-width: 575px) {
+        display: none;
+      }
+    }
+    img {
+      display: none;
+      @media (max-width: 575px) {
+        display: block;
+        margin: auto;
       }
     }
   }

@@ -166,6 +166,9 @@ p.desc {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  @media (max-width: 767px) {
+    padding: 0 25px;
+  }
   &__head {
     opacity: 0;
     transform: translateY(40px);
