@@ -27,7 +27,7 @@ export default {
         scrollingSpeed: 1000,
         autoScrolling:true,
         scrollHorizontally: true,
-
+        verticalCentered: false,
         // eslint-disable-next-line no-unused-vars
         onLeave: function(index, nextIndex, direction) {
           //line
