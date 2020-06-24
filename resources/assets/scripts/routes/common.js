@@ -1,4 +1,4 @@
-import fullpage from 'fullpage.js/dist/fullpage.min'
+//import fullpage from 'fullpage.js/dist/fullpage.min'
 import 'bootstrap'
 import './two-slider'
 import './three-slider'
@@ -13,14 +13,14 @@ export default {
   init() {
 
     //pagination
-    let pag = $('.tooltip-split li');
+    /*let pag = $('.tooltip-split li');
 
-    let last = 0;
-
-
+    let last = 0;*/
 
 
-    new fullpage('#fullpage', {
+
+
+    /*new fullpage('#fullpage', {
       //options here
       scrollingSpeed: 1000,
       autoScrolling:true,
@@ -117,7 +117,7 @@ export default {
           $('.tooltip_alt').removeClass('show')
         }
       },
-    });
+    });*/
 
     // eslint-disable-next-line no-undef,no-unused-vars
     var oneSlider = new Swiper('.swiper-container-one', {
@@ -373,7 +373,7 @@ export default {
     } else {
       return;
     }
-    $(window).on('resize', function () {
+    /*$(window).on('resize', function () {
       let widthD = document.querySelector('body').getBoundingClientRect().width;
       if( widthD < 1024) {
         // eslint-disable-next-line no-undef
@@ -469,7 +469,7 @@ export default {
           },
         });
       }
-    });
+    });*/
 
 
 
