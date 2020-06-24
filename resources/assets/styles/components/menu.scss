@@ -29,6 +29,8 @@ svg {
       @media (max-width: 575px) {
         font-size: 27px;
         line-height: 32px;
+        max-width: 405px;
+        margin: 20px auto;
       }
     }
     p {

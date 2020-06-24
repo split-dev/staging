@@ -27,6 +27,13 @@
   }
 }
 
+.mob-title {
+  h1 {
+    @media (max-width: 575px) {
+      font-size: 27px;
+    }
+  }
+}
 .animate-img {
   @media (max-width: 1200px) {
     transform: scale(0.8);
@@ -126,6 +133,19 @@ h3 {
   }
 }
 
+.about__left {
+  p {
+    @media (max-width: 575px) {
+      padding: 5px 10px;
+    }
+  }
+  h1 {
+    @media (max-width: 575px) {
+      font-size: 27px;
+    }
+  }
+}
+
 p.desc {
   margin-top: 20px;
   color: #414042;
@@ -144,9 +164,18 @@ p.desc {
     line-height: 22px;
     text-align: center;
   }
+  @media (max-width: 575px) {
+    font-size: 16px;
+    margin-top: 0;
+  }
   @include NexaReg;
   &.show {
     opacity: 1;
+  }
+}
+h1 {
+  @media (max-width: 575px) {
+    max-width: 267px;
   }
 }
 
