@@ -376,7 +376,7 @@ export default {
     });
 
     let widthD = document.querySelector('body').getBoundingClientRect().width;
-    if( widthD < 1024) {
+    /*if( widthD < 1024) {
       // eslint-disable-next-line no-undef
       fullpage_api.destroy('all');
     } else {
@@ -390,7 +390,7 @@ export default {
       } else {
         start();
       }
-    });
+    });*/
 
 
 
