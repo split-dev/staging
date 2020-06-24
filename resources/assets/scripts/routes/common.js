@@ -20,7 +20,7 @@ export default {
 
 
 
-    new fullpage('#fullpage', {
+    /*new fullpage('#fullpage', {
       //options here
       scrollingSpeed: 1000,
       autoScrolling:true,
@@ -117,7 +117,7 @@ export default {
           $('.tooltip_alt').removeClass('show')
         }
       },
-    });
+    });*/
 
     // eslint-disable-next-line no-undef,no-unused-vars
     var oneSlider = new Swiper('.swiper-container-one', {
