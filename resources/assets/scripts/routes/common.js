@@ -173,6 +173,9 @@ export default {
 
     //five click-box
     if (widthD < 1024) {
+      $(window).on('unload', function() {
+        $(window).scrollTop(0, 0);
+      });
       $('.one-page .card-header').click( function () {
         setTimeout(function(){
           arraySize[4] = $('.one-page .swiper-slide-active .info-slide__other').height();
