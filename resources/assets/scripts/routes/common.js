@@ -21,7 +21,6 @@ export default {
 
     let widthD = document.querySelector('body').getBoundingClientRect().width;
 
-    // eslint-disable-next-line no-unused-vars
     function start() {
       new fullpage('#fullpage', {
         //options here
@@ -121,13 +120,15 @@ export default {
           }
         },
       });
+      flag = true
     }
 
-    if( widthD < 1024) {
+    let flag = false;
+    if( widthD < 1024 && flag) {
       // eslint-disable-next-line no-undef
       fullpage_api.destroy('all');
-    } else {
-      //start();
+    } else if (widthD > 1024 && !flag) {
+      start();
     }
 
     // eslint-disable-next-line no-undef,no-unused-vars
