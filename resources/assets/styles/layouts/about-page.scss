@@ -24,9 +24,12 @@
 }
 .about {
   height: 100%;
-  padding-top: 77px;
+  padding-top: 40px;
   z-index: 2;
   position: relative;
+  @media (max-width: 1024px) {
+    padding-top: 80px;
+  }
   &__box {
     display: flex;
     align-items: flex-start;
@@ -102,6 +105,10 @@
       }
     }
     h1 {
+      width: 120%;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
       br {
         @media (max-width: 1024px) {
           display: none;
