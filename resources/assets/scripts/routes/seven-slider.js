@@ -21,6 +21,16 @@ sevenSlider.on('init', function() {
 sevenSlider.init();
 
 //swiper swipe
+//five click-box
+let widthD = document.querySelector('body').getBoundingClientRect().width;
+if (widthD < 1024) {
+  $('.seven-page .card-header').click( function () {
+    setTimeout(function(){
+      arraySize[4] = $('.seven-page .swiper-slide-active .info-slide__other').height();
+      $('.seven-page .swiper-wrapper').css('height', arraySize[4] + 'px');
+    }, 250);
+  });
+}
 let arraySlide = $('.seven-page .swiper-wrapper .swiper-slide');
 let arraySize = [];
 for (let i = 0; i<arraySlide.length; i++) {

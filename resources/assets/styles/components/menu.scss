@@ -97,12 +97,10 @@ svg {
     }
   }
   span {
-    width: max-content;
     opacity: 0;
     position: absolute;
+    width: auto;
     top: -40px;
-    left: 0;
-    right: 0;
     margin: 0 auto 29px;
     background-color: #fff;
     border-radius: 14px;

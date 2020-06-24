@@ -22,7 +22,6 @@
  */
 @import "~fullpage.js/dist/fullpage.min.css";
 @import "~swiper/css/swiper.min.css";
-@import "~aos/dist/aos.css";
 
 /**
  * ==========
@@ -52,6 +51,7 @@
 // @import "layouts/base";
 
 @import "common/global";
+@import "common/Edge-style";
 @import "layouts/one-page";
 @import "layouts/two-page";
 @import "layouts/three-page";

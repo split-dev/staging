@@ -27,7 +27,7 @@ export default {
         scrollingSpeed: 1000,
         autoScrolling:true,
         scrollHorizontally: true,
-        verticalCentered: false,
+        licenseKey: ('15560068-077B4EC4-B9C3AECE-631A2B58'),
         // eslint-disable-next-line no-unused-vars
         onLeave: function(index, nextIndex, direction) {
           //line
@@ -170,6 +170,16 @@ export default {
       fullpage_api.moveTo(id);
     });
 
+
+    //five click-box
+    if (widthD < 1024) {
+      $('.one-page .card-header').click( function () {
+        setTimeout(function(){
+          arraySize[4] = $('.one-page .swiper-slide-active .info-slide__other').height();
+          $('.one-page .swiper-wrapper').css('height', arraySize[4] + 'px');
+        }, 250);
+      });
+    }
 
     let arraySlide = $('.one-page .swiper-wrapper .swiper-slide');
     let arraySize = [];

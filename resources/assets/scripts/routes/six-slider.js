@@ -8,6 +8,16 @@ var sixSlider = new Swiper('.swiper-container-six', {
 });
 
 //swiper swipe
+//five click-box
+let widthD = document.querySelector('body').getBoundingClientRect().width;
+if (widthD < 1024) {
+  $('.six-page .card-header').click( function () {
+    setTimeout(function(){
+      arraySize[4] = $('.six-page .swiper-slide-active .info-slide__other').height();
+      $('.six-page .swiper-wrapper').css('height', arraySize[4] + 'px');
+    }, 250);
+  });
+}
 let arraySlide = $('.six-page .swiper-wrapper .swiper-slide');
 let arraySize = [];
 for (let i = 0; i<arraySlide.length; i++) {
@@ -86,7 +96,6 @@ $('.six-page .arrow-left').click( function () {
 });
 
 $('.six-page .arrow-right').click( function () {
-  console.log(sixSlider.activeIndex)
   if (sixSlider.activeIndex < 4) {
     $('.six .swiper-slide-active .info-slide__other').addClass('fade-left');
     $('.swiper-container-six .swiper-slide-next .info-slide__other').addClass('fade-right');
