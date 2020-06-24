@@ -19,7 +19,9 @@ export default {
 
 
 
+    let widthD = document.querySelector('body').getBoundingClientRect().width;
 
+    // eslint-disable-next-line no-unused-vars
     function start() {
       new fullpage('#fullpage', {
         //options here
@@ -125,7 +127,7 @@ export default {
       // eslint-disable-next-line no-undef
       fullpage_api.destroy('all');
     } else {
-      start();
+      //start();
     }
 
     // eslint-disable-next-line no-undef,no-unused-vars
@@ -375,7 +377,6 @@ export default {
       });
     });
 
-    let widthD = document.querySelector('body').getBoundingClientRect().width;
     /*if( widthD < 1024) {
       // eslint-disable-next-line no-undef
       fullpage_api.destroy('all');
