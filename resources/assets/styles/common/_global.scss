@@ -114,14 +114,14 @@ body {
   }
 }
 
-/*.section {
+.section {
   overflow: hidden;
   transform: translate3d(0, 0, 0);
-  !*@media (max-width: 1023px) {
+  @media (max-width: 1023px) {
     overflow: visible;
     transform: none !important;
-  }*!
-}*/
+  }
+}
 
 .anim-svg {
   max-width: 715px;
@@ -374,14 +374,14 @@ body {
   }
 }
 
-/*//box size
+//box size
 .box-1 {
   height: 100vh;
   @media (max-width: 575px) {
     height: auto;
     padding-bottom: 123px;
   }
-}*/
+}
 
 .mob-title {
   display: none;
