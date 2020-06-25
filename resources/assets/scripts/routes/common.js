@@ -410,10 +410,12 @@ export default {
     });
 
    //resize slider
+    let dist = true;
     $(window).on('resize', function () {
       // eslint-disable-next-line no-unused-vars
         let widthD = document.querySelector('body').getBoundingClientRect().width;
-        if( widthD < 1024) {
+        if( widthD < 1024 && dist) {
+          dist = false;
           arraySize = [84,295,438,295,371]
           if ($('.one-page .swiper-wrapper .swiper-slide-active').find($('.info-slide__other')).hasClass('info-slide__other')) {
             arraySlide = $('.one-page .swiper-wrapper .swiper-slide-active .info-slide__other').height();
