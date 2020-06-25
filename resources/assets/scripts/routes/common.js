@@ -409,10 +409,13 @@ export default {
       }
     });
 
-   /*//resize slider
-    let dist = true;
-    $(window).on('resize', function () {
-      // eslint-disable-next-line no-unused-vars
+
+
+    setTimeout(function(){
+      //resize slider
+      let dist = true;
+      $(window).on('resize', function () {
+        // eslint-disable-next-line no-unused-vars
         let widthD = document.querySelector('body').getBoundingClientRect().width;
         if( widthD < 1024 && dist) {
           dist = false;
@@ -426,7 +429,8 @@ export default {
         } else {
           return;
         }
-    });*/
+      });
+    }, 500);
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired
