@@ -430,7 +430,7 @@ export default {
           return;
         }
       });
-    }, 500);
+    }, 5000);
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired
