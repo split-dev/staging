@@ -12,6 +12,16 @@
   opacity: 0;
   visibility: hidden;
   z-index: 999;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -40%;
+    left: 0;
+    right: 0;
+    background: rgba(11, 11, 11, 0.8);
+  }
   &.show {
     opacity: 1;
     visibility: visible;
