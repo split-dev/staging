@@ -429,7 +429,9 @@ export default {
             arraySlide = $('.one-page .swiper-wrapper .swiper-slide-active .info-slide__head').height();
           }
           $('.one-page .swiper-wrapper').css('height', arraySize[oneSlider.activeIndex]);
-        } else {
+        } else if (!dist && widthD > 1024) {
+          $('.swiper-wrapper').css('height', 532.2);
+          dist = true;
           return;
         }
     });
