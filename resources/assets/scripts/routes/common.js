@@ -383,7 +383,7 @@ export default {
       let srcAttr = $(this).parent().find($('iframe')).attr('src');
       $(this).parent().find($('iframe')).attr('src', srcAttr);
       $('body').removeClass('blocked');
-      $('html').addClass('blocked');
+      $('html').removeClass('blocked');
     });
 
     $(function($){
@@ -396,7 +396,7 @@ export default {
           $('.wrapper .show').removeClass('show');
           $('.wrapper').removeClass('show');
           $('body').removeClass('blocked');
-          $('html').addClass('blocked');
+          $('html').removeClass('blocked');
         }
       });
     });
