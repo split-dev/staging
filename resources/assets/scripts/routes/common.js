@@ -409,7 +409,7 @@ export default {
       }
     });
 
-   //resize slider
+   /*//resize slider
     let dist = true;
     $(window).on('resize', function () {
       // eslint-disable-next-line no-unused-vars
@@ -426,7 +426,7 @@ export default {
         } else {
           return;
         }
-    });
+    });*/
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired
