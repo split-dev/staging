@@ -174,4 +174,19 @@ function nextSlide(numberSlide) {
   }
 }
 
-
+//resize slider
+$(window).on('resize', function () {
+  // eslint-disable-next-line no-unused-vars
+  let widthD = document.querySelector('body').getBoundingClientRect().width;
+  if( widthD < 1024) {
+    arraySize = [106,295,295,163,371];
+    if ($('.four-page .swiper-wrapper .swiper-slide-active').find($('.info-slide__other')).hasClass('info-slide__other')) {
+      arraySlide = $('.four-page .swiper-wrapper .swiper-slide-active .info-slide__other').height();
+    } else {
+      arraySlide = $('.four-page .swiper-wrapper .swiper-slide-active .info-slide__head').height();
+    }
+    $('.four-page .swiper-wrapper').css('height', arraySize[fourSlider.activeIndex]);
+  } else {
+    return;
+  }
+});

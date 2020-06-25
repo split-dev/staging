@@ -177,4 +177,21 @@ function nextSlide(numberSlide) {
   }
 }
 
+//resize slider
+$(window).on('resize', function () {
+  // eslint-disable-next-line no-unused-vars
+  let widthD = document.querySelector('body').getBoundingClientRect().width;
+  if( widthD < 1024) {
+    arraySize = [106,372,339,97,371];
+    if ($('.three-page .swiper-wrapper .swiper-slide-active').find($('.info-slide__other')).hasClass('info-slide__other')) {
+      arraySlide = $('.three-page .swiper-wrapper .swiper-slide-active .info-slide__other').height();
+    } else {
+      arraySlide = $('.three-page .swiper-wrapper .swiper-slide-active .info-slide__head').height();
+    }
+    $('.three-page .swiper-wrapper').css('height', arraySize[threeSlider.activeIndex]);
+  } else {
+    return;
+  }
+});
+
 
