@@ -179,10 +179,12 @@ function nextSlide(numberSlide) {
 }
 
 //resize slider
+let dist = true;
 $(window).on('resize', function () {
   // eslint-disable-next-line no-unused-vars
   let widthD = document.querySelector('body').getBoundingClientRect().width;
-  if( widthD < 1024) {
+  if( widthD < 1024 && dist && widthD > 575) {
+    dist = false;
     arraySize = [128,353,273,163,327];
     if ($('.seven-page .swiper-wrapper .swiper-slide-active').find($('.info-slide__other')).hasClass('info-slide__other')) {
       arraySlide = $('.seven-page .swiper-wrapper .swiper-slide-active .info-slide__other').height();
