@@ -401,8 +401,10 @@ export default {
         // eslint-disable-next-line no-undef
         fullpage_api.destroy('all');
         flag = false;
+        $('.animate-img').addClass('start-zoom');
       } else if (widthD > 1024 && !flag) {
         start();
+        $('.animate-img').removeClass('start-zoom');
       }
     });
 
