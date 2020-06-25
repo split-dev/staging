@@ -125,10 +125,10 @@ export default {
 
     let flag = false;
     if( widthD < 1024 && flag) {
-      // eslint-disable-next-line no-undef
-      fullpage_api.destroy('all');
+      return;
     } else if (widthD > 1024 && !flag) {
       start();
+      flag = true;
     }
 
     // eslint-disable-next-line no-undef,no-unused-vars
@@ -391,22 +391,33 @@ export default {
       });
     });
 
-    /*if( widthD < 1024) {
-      // eslint-disable-next-line no-undef
-      fullpage_api.destroy('all');
-    } else {
-      return;
-    }
+
     $(window).on('resize', function () {
       let widthD = document.querySelector('body').getBoundingClientRect().width;
-      if( widthD < 1024) {
+      if( widthD < 1024 && flag) {
         // eslint-disable-next-line no-undef
         fullpage_api.destroy('all');
-      } else {
+        flag = false;
+      } else if (widthD > 1024 && !flag) {
         start();
       }
-    });*/
+    });
 
+   //resize slider
+    /*$(window).on('resize', function () {
+        let widthD = document.querySelector('body').getBoundingClientRect().width;
+        if( widthD < 1024) {
+          let arraySlide = $('.one-page .swiper-wrapper .swiper-slide');
+          let arraySize = [];
+          for (let i = 0; i<arraySlide.length; i++) {
+            arraySize[i] = $(arraySlide[i]).height() + 20;
+            $('.one-page .swiper-wrapper').css('height', arraySize[i]);
+            console.log(arraySize[i])
+          }
+        } else {
+          return;
+        }
+    });*/
 
 
   },
