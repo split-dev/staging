@@ -371,7 +371,8 @@ export default {
       let modal = $(this).attr('data-modal');
       $('.wrapper').addClass('show');
       $(modal).addClass('show');
-      $('body').addClass('blocked')
+      $('body').addClass('blocked');
+      $('html').addClass('blocked');
     });
 
       //close
@@ -381,7 +382,8 @@ export default {
       $('.wrapper').removeClass('show');
       let srcAttr = $(this).parent().find($('iframe')).attr('src');
       $(this).parent().find($('iframe')).attr('src', srcAttr);
-      $('body').removeClass('blocked')
+      $('body').removeClass('blocked');
+      $('html').addClass('blocked');
     });
 
     $(function($){
@@ -393,7 +395,8 @@ export default {
           && div.has(e.target).length === 0) {
           $('.wrapper .show').removeClass('show');
           $('.wrapper').removeClass('show');
-          $('body').removeClass('blocked')
+          $('body').removeClass('blocked');
+          $('html').addClass('blocked');
         }
       });
     });

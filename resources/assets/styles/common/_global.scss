@@ -89,6 +89,13 @@
   transition: 0.3s;
   cursor: pointer;
 }
+
+html {
+  &.blocked {
+    overflow: hidden !important;
+  }
+}
+
 body {
   position: relative;
   &.blocked {
