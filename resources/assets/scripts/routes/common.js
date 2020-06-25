@@ -190,11 +190,12 @@ export default {
     let arraySlide = $('.one-page .swiper-wrapper .swiper-slide');
     let arraySize = [];
     for (let i = 0; i<arraySlide.length; i++) {
-      arraySize[i] = $(arraySlide[i]).height() + 20;
+      arraySize[i] = $(arraySlide[i]).height() + 40;
     }
     $('.one-page .swiper-wrapper').css('height', arraySize[0]);
     //swiper swipe
     oneSlider.on('transitionStart', function () {
+      console.log(arraySize)
       $('.one-page .swiper-wrapper').css('height', arraySize[oneSlider.activeIndex]);
       if(oneSlider.activeIndex > 0) {
         setTimeout( function () {
