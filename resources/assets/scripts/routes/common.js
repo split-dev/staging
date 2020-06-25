@@ -26,6 +26,7 @@ export default {
         //options here
         scrollingSpeed: 1000,
         autoScrolling:true,
+        resize:true,
         scrollHorizontally: true,
         licenseKey: ('15560068-077B4EC4-B9C3AECE-631A2B58'),
         // eslint-disable-next-line no-unused-vars
@@ -120,6 +121,8 @@ export default {
           }
         },
       });
+      // eslint-disable-next-line no-undef
+      fullpage_api.reBuild();
       flag = true
     }
 
