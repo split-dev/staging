@@ -84,32 +84,42 @@ export default {
             $(destination.item).find($('.one .info-slide__head .desc')).addClass('show');
             $(destination.item).find($('.one .navigation-one')).addClass('show');
             $('.about-scroll').removeClass('hide');
+            $('.home-scroll').removeClass('hide');
           } else if (destination.index == 2) {
             $(destination.item).find($('.two .info-slide__head .desc')).addClass('show');
             $(destination.item).find($('.two .navigation-two')).addClass('show');
             $('.about-scroll').removeClass('hide');
+            $('.home-scroll').removeClass('hide');
           } else if (destination.index == 3) {
             $(destination.item).find($('.three .info-slide__head .desc')).addClass('show');
             $(destination.item).find($('.three .navigation-three')).addClass('show');
             $('.about-scroll').removeClass('hide');
+            $('.home-scroll').removeClass('hide');
           } else if (destination.index == 4) {
             $(destination.item).find($('.four .info-slide__head .desc')).addClass('show');
             $(destination.item).find($('.four .navigation-four')).addClass('show');
             $('.about-scroll').removeClass('hide');
+            $('.home-scroll').removeClass('hide');
           } else if (destination.index == 5) {
             $(destination.item).find($('.five .info-slide__head .desc')).addClass('show');
             $(destination.item).find($('.five .navigation-five')).addClass('show');
             $('.about-scroll').removeClass('hide');
+            $('.home-scroll').removeClass('hide');
           } else if (destination.index == 6) {
             $(destination.item).find($('.six .info-slide__head .desc')).addClass('show');
             $(destination.item).find($('.six .navigation-six')).addClass('show');
             $('.about-scroll').removeClass('hide');
+            $('.home-scroll').removeClass('hide');
           } else if (destination.index == 7) {
             $(destination.item).find($('.seven .info-slide__head .desc')).addClass('show');
             $(destination.item).find($('.seven .navigation-six')).addClass('show');
             $('.about-scroll').removeClass('hide');
+            $('.home-scroll').removeClass('hide');
           } else if (destination.index == 8) {
             $('.about-scroll').addClass('hide');
+            $('.home-scroll').removeClass('hide');
+          } else if (destination.index == 0) {
+            $('.home-scroll').addClass('hide');
           }
 
 

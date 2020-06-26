@@ -199,3 +199,8 @@ $('.about-scroll').click( function () {
   fullpage_api.moveTo(9);
 });
 
+$('.home-scroll').click( function () {
+  // eslint-disable-next-line no-undef
+  fullpage_api.moveTo(1);
+});
+
