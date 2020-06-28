@@ -401,6 +401,10 @@ body {
 //box size
 .box-1 {
   height: 100vh;
+  @media (max-width: 767px) and (max-height: 420px) {
+    height: auto;
+    padding-bottom: 123px;
+  }
   @media (max-width: 575px) {
     height: auto;
     padding-bottom: 123px;
@@ -437,7 +441,7 @@ body {
   transform: translateY(0);
   transition: 0.3s;
   @include NexaReg;
-  @media (max-width: 1025px) {
+  @media (max-width: 1023px) {
     display: none;
   }
   &:after {
@@ -468,7 +472,7 @@ body {
   transform: translateY(0);
   transition: 0.3s;
   @include NexaReg;
-  @media (max-width: 1025px) {
+  @media (max-width: 1023px) {
     display: none;
   }
   &:after {
