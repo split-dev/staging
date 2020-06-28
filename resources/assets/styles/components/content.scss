@@ -54,13 +54,15 @@
     max-height: 26px;
     position: absolute;
     left: -45px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    bottom: 30px;
+    transform: scale(1.8);
     transition: 0.3s;
-    transform: translateX(0);
     @media (min-width: 1023px) {
       display: none;
+    }
+    @media (max-width: 575px) {
+      bottom: -30px;
+      left: -25px;
     }
     @media (max-width: 360px) {
       left: -67px;
@@ -73,13 +75,15 @@
     max-height: 26px;
     position: absolute;
     right: -45px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    bottom: 30px;
+    transform: scale(1.8);
     transition: 0.3s;
-    transform: translateX(0);
     @media (min-width: 1023px) {
       display: none;
+    }
+    @media (max-width: 575px) {
+      bottom: -30px;
+      right: -25px;
     }
     @media (max-width: 360px) {
       right: -67px;
