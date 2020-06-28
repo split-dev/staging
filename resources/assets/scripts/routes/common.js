@@ -371,7 +371,7 @@ export default {
     let platform = navigator.platform;
     if (platform == 'Win32') {
       $('.bottom-box').removeClass('mac');
-    } else if (platform == 'MacIntel') {
+    } else if (platform == 'MacIntel'  || platform == 'iPhone' || platform == 'iPod' || platform == 'iPad') {
       $('.fp-tooltip .tooltip-inner').addClass('mac');
       $('.bottom-box').addClass('mac');
       $('.button_text_container').addClass('mac');
