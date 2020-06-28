@@ -40,8 +40,12 @@ svg {
       letter-spacing: -0.32px;
       text-align: center;
       @include NexaReg;
+      @media (max-width: 1023px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
       @media (max-width: 575px) {
-        display: none;
+        font-size: 19px;
       }
     }
   }

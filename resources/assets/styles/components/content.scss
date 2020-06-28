@@ -165,17 +165,17 @@ p.desc {
   opacity: 0;
   transition: 0.5s;
   @media (max-width: 1200px) {
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 20px;
+    line-height: 24px;
   }
   @media (max-width: 1023px) {
     opacity: 1;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 24px;
     text-align: center;
   }
   @media (max-width: 575px) {
-    font-size: 16px;
+    font-size: 19px;
     margin-top: 0;
   }
   @include NexaReg;
@@ -258,11 +258,11 @@ h1 {
       margin-top: 11px;
     }
     @media (max-width: 1023px) {
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 20px;
+      line-height: 24px;
     }
     @media (max-width: 575px) {
-      font-size: 16px;
+      font-size: 19px;
       line-height: 20px;
     }
     > a {
@@ -282,12 +282,12 @@ h1 {
         line-height: 19px;
       }
       @media (max-width: 1023px) {
-        font-size: 18px !important;
-        line-height: 22px !important;
+        font-size: 20px !important;
+        line-height: 24px !important;
+        margin: 10px 0;
       }
       @media (max-width: 575px) {
-        font-size: 16px !important;
-        line-height: 20px !important;
+        font-size: 19px !important;
       }
     }
   }

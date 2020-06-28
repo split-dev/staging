@@ -25,10 +25,10 @@
         text-align: left;
         white-space: nowrap;
         @media (max-width: 1023px) {
-          font-size: 18px;
+          font-size: 21px;
         }
         @media (max-width: 575px) {
-          font-size: 16px;
+          font-size: 18px;
         }
         &:hover {
           text-decoration: none;
@@ -56,11 +56,11 @@
       margin-bottom: 15px;
       text-align: left;
       @media (max-width: 1023px) {
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 20px;
+        line-height: 24px;
       }
       @media (max-width: 575px) {
-        font-size: 16px;
+        font-size: 17px;
         line-height: 20px;
       }
     }

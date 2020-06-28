@@ -52,7 +52,7 @@
     top: 0;
     margin: auto;
     z-index: 25;
-    @media (min-width: 1025px) {
+    @media (min-width: 1023px) {
       content: none;
     }
   }
@@ -73,7 +73,7 @@
     margin: auto;
     max-width: 2px;
     z-index: 25;
-    @media (min-width: 1025px) {
+    @media (min-width: 1023px) {
       content: none;
     }
   }
@@ -241,6 +241,9 @@ body {
     margin-top: 35px;
     margin-bottom: 100px;
     order: 2;
+    .button_su {
+      transform: scale(1.2);
+    }
   }
   @media (max-width: 767px) {
     max-width: 100%;

@@ -19,7 +19,7 @@ export default {
 
 
 
-    let widthD = document.querySelector('body').getBoundingClientRect().width;
+    let widthD = window.innerWidth;
 
     function start() {
       new fullpage('#fullpage', {
@@ -136,10 +136,11 @@ export default {
       flag = true
     }
 
+    console.log(widthD)
     let flag = false;
     if( widthD < 1024 && flag) {
       return;
-    } else if (widthD > 1024 && !flag) {
+    } else if (widthD >= 1024 && !flag) {
       start();
       flag = true;
     }
@@ -415,13 +416,13 @@ export default {
 
 
     $(window).on('resize', function () {
-      let widthD = document.querySelector('body').getBoundingClientRect().width;
+      let widthD = window.innerWidth;
       if( widthD < 1024 && flag) {
         // eslint-disable-next-line no-undef
         fullpage_api.destroy('all');
         flag = false;
         $('.animate-img').addClass('start-zoom');
-      } else if (widthD > 1024 && !flag) {
+      } else if (widthD >= 1024 && !flag) {
         start();
         $('.animate-img').removeClass('start-zoom');
       }

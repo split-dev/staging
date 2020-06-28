@@ -46,6 +46,9 @@
   visibility: hidden;
   transition: 0.3s;
   transition-delay: 0.2s;
+  @media (max-width: 1024px) {
+    bottom: -70px;
+  }
   &.vis {
     visibility: visible;
     opacity: 1;
