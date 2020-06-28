@@ -258,9 +258,11 @@ export default {
       } else if (oneSlider.activeIndex == 4) {
         $('.one-page .animate-img .arrow-right').addClass('hide');
         $('.navigation-one .arrow-right').addClass('opacity');
+        $('.navigation-one .arrow-left').removeClass('opacity');
       } else if (oneSlider.activeIndex == 0) {
         $('.one-page .animate-img .arrow-left').addClass('hide');
         $('.navigation-one .arrow-left').addClass('opacity');
+        $('.navigation-one .arrow-right').removeClass('opacity');
       }
     });
 

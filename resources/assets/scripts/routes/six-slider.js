@@ -78,9 +78,11 @@ sixSlider.on('transitionStart', function () {
   } else if (sixSlider.activeIndex == 4) {
     $('.six-page .animate-img .arrow-right').addClass('hide');
     $('.navigation-six .arrow-right').addClass('opacity');
+    $('.navigation-six .arrow-left').removeClass('opacity');
   } else if (sixSlider.activeIndex == 0) {
     $('.six-page .animate-img .arrow-left').addClass('hide');
     $('.navigation-six .arrow-left').addClass('opacity');
+    $('.navigation-six .arrow-right').removeClass('opacity');
   }
 });
 

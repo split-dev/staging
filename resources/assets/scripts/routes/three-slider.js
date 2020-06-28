@@ -78,9 +78,11 @@ threeSlider.on('transitionStart', function () {
   } else if (threeSlider.activeIndex == 4) {
     $('.three-page .animate-img .arrow-right').addClass('hide');
     $('.navigation-three .arrow-right').addClass('opacity');
+    $('.navigation-three .arrow-left').removeClass('opacity');
   } else if (threeSlider.activeIndex == 0) {
     $('.three-page .animate-img .arrow-left').addClass('hide');
     $('.navigation-three .arrow-left').addClass('opacity');
+    $('.navigation-three .arrow-right').removeClass('opacity');
   }
 });
 
