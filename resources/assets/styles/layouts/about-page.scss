@@ -76,7 +76,7 @@
       @include NexaReg;
       @media (max-width: 1024px) {
         font-size: 16px;
-        line-height: 18px;
+        line-height: 22px;
         max-width: 630px;
         margin: 14px auto 0;
       }
@@ -167,8 +167,8 @@
             font-size: 13px;
             @include NexaReg;
             @media (max-width: 1024px) {
-              font-size: 16px;
-              line-height: 18px;
+              font-size: 18px;
+              line-height: 22px;
             }
           }
         }
@@ -205,8 +205,8 @@
         }
         p {
           @media (max-width: 1024px) {
-            font-size: 16px;
-            line-height: 18px;
+            font-size: 18px;
+            line-height: 22px;
           }
         }
       }
