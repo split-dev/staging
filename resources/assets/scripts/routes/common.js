@@ -136,7 +136,6 @@ export default {
       flag = true
     }
 
-    console.log(widthD)
     let flag = false;
     if( widthD < 1024 && flag) {
       return;
@@ -206,7 +205,6 @@ export default {
     $('.one-page .swiper-wrapper').css('height', arraySize[0]);
     //swiper swipe
     oneSlider.on('transitionStart', function () {
-      console.log(arraySize)
       $('.one-page .swiper-wrapper').css('height', arraySize[oneSlider.activeIndex]);
       if(oneSlider.activeIndex > 0) {
         setTimeout( function () {
