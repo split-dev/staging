@@ -31,7 +31,7 @@
 .mob-title {
   h1 {
     @media (max-width: 575px) {
-      font-size: 27px;
+      font-size: 32px;
     }
   }
 }
@@ -58,6 +58,14 @@
     bottom: 30px;
     transform: scale(1.8);
     transition: 0.3s;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      content: url("images/shadow-left.svg");
+    }
     @media (min-width: 1023px) {
       display: none;
     }
@@ -79,6 +87,14 @@
     bottom: 30px;
     transform: scale(1.8);
     transition: 0.3s;
+    &:before {
+      position: absolute;
+      right: -4px;
+      top: -2px;
+      bottom: 0;
+      z-index: -1;
+      content: url("images/shadow-right.svg");
+    }
     @media (min-width: 1023px) {
       display: none;
     }
@@ -193,7 +209,7 @@ p.desc {
 }
 h1 {
   @media (max-width: 575px) {
-    max-width: 267px;
+    max-width: 295px;
   }
 }
 
@@ -234,6 +250,11 @@ h1 {
     &.show-title {
       opacity: 1;
       transform: translateY(0);
+    }
+    .over-img {
+      @media (max-width: 1023px) {
+        display: none;
+      }
     }
   }
   &__other {
