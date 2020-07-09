@@ -294,8 +294,17 @@ body {
     cursor: pointer;
   }
   .arrow-left {
+    position: relative;
     transition: 0.3s;
     transform: translateX(0);
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      content: url("images/shadow-left.svg");
+    }
     @media (max-width: 1023px) {
       display: none;
     }
@@ -308,8 +317,17 @@ body {
     }
   }
   .arrow-right {
+    position: relative;
     transition: 0.3s;
     transform: translateX(0);
+    &:before {
+      position: absolute;
+      right: -4px;
+      top: -1px;
+      bottom: 0;
+      z-index: -1;
+      content: url("images/shadow-right.svg");
+    }
     @media (max-width: 1023px) {
       display: none;
     }
@@ -332,11 +350,20 @@ body {
       cursor: pointer;
       display: block;
       margin: 0 12px;
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       border: 2px solid #fff;
       border-radius: 50%;
       transition: 0.3s;
+      position: relative;
+      &:before {
+        position: absolute;
+        left: -3px;
+        right: 0;
+        top: -3px;
+        z-index: -1;
+        content: url("images/shadow-oval.svg");
+      }
       &.def {
         background-color: #fff;
         opacity: 0.4;
@@ -507,4 +534,15 @@ body {
   }
 }
 
+.over-img {
+  margin-top: 5px;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 5px;
+    bottom: 0;
+    z-index: -1;
+    content: url("images/show-line.svg");
+  }
+}
 
