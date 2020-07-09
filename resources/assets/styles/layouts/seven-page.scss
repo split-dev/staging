@@ -11,6 +11,7 @@
     left: 0;
     height: 100%;
     bottom: 0;
+    opacity: 0.4;
   }
   .animate-img {
     max-height: 480px;
@@ -27,6 +28,9 @@
     }
     @media (max-width: 1200px) {
       margin-right: 15px;
+    }
+    .button_su {
+      bottom: -50px;
     }
     img {
       transition: 0.5s;
