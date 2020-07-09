@@ -220,10 +220,10 @@
     left: 30px !important;
     right: auto;
     text-align: center;
-    color: #646464;
-    font-size: 11px;
+    color: #414042;
+    font-size: 12px;
     transform: translateX(-10px);
-    @include NexaReg;
+    @include NexaBold;
   }
   #fp-nav.tooltip_alt ul li:hover {
     z-index: 100;
