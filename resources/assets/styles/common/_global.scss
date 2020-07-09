@@ -283,6 +283,9 @@ body {
   align-items: center;
   width: 100%;
   max-width: 240px;
+  margin-top: -20px;
+  position: relative;
+  z-index: 30;
   @media (max-width: 1023px) {
     max-width: none;
     margin-top: 35px;
@@ -404,6 +407,10 @@ body {
 //box size
 .box-1 {
   height: 100vh;
+  @media (max-width: 1023px) {
+    height: auto !important;
+    padding-bottom: 40px;
+  }
   @media (max-width: 767px) and (max-height: 420px) {
     height: auto;
     padding-bottom: 123px;

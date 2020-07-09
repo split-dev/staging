@@ -45,7 +45,7 @@ threeSlider.on('transitionStart', function () {
     } else if (threeSlider.activeIndex === 3) {
       $('.three-page .animate-img').removeClass('hide-4 hide-5');
     }  else if (threeSlider.activeIndex === 4) {
-      $('.three-page .animate-img').removeClass('hide-4 hide-5');
+      $('.three-page .animate-img').removeClass('hide-4 hide-6 hide-7');
     }
   }, 400);
 
@@ -158,23 +158,23 @@ function nextSlide(numberSlide) {
   } else if (numberSlide == 2) {
     $('.three .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     if (threeSlider.activeIndex == 2 || threeSlider.activeIndex == 3 || threeSlider.activeIndex == 4) {
-      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5');
+      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5 hide-6 hide-7');
     } else {
-      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
+      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
     }
   } else if (numberSlide == 3) {
     $('.three .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     if (threeSlider.activeIndex == 3 || threeSlider.activeIndex == 4) {
-      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3');
+      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5 hide-6 hide-7');
     } else {
-      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
+      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
     }
   } else if (numberSlide == 4) {
     $('.three .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     if (threeSlider.activeIndex == 3 || threeSlider.activeIndex == 4) {
-      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3');
+      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5 hide-6 hide-7');
     } else {
-      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5');
+      $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
     }
   }
 }

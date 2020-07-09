@@ -66,6 +66,14 @@
           top: 120px;
         }
       }
+      &:nth-of-type(6) {
+        right: 66px;
+        top: 97px;
+        @media (max-width: 1024px) {
+          right: 135px;
+          top: 124px;
+        }
+      }
     }
     &.start-zoom {
       img {
@@ -120,6 +128,14 @@
       }
     }
     &.hide-6 {
+      img {
+        &:nth-of-type(6) {
+          transform: scale(1) translateX(30px);
+          opacity: 0;
+        }
+      }
+    }
+    &.hide-7 {
       img {
         &:nth-of-type(6) {
           transform: scale(1) translateX(30px);
