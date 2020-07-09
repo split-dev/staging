@@ -1,5 +1,8 @@
 .one-page {
   outline: none;
+  .fix-container {
+    max-height: 560px;
+  }
   .anim-svg {
     position: absolute;
     left: 0;
