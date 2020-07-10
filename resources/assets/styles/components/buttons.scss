@@ -95,7 +95,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 2px;
+  @media (max-width: 575px) {
+    padding-top: 3px;
+  }
   &.mac {
     padding-top: 3px;
   }
