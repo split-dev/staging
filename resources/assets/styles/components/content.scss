@@ -291,8 +291,8 @@ h1 {
       letter-spacing: -0.36px;
       @include NexaReg;
       @media (max-width: 1023px) {
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 18px !important;
+        line-height: 22px !important;
         margin: 10px 0;
       }
     }
