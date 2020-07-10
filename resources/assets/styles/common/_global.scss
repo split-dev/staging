@@ -561,3 +561,6 @@ body {
   }
 }
 
+.no_click {
+  pointer-events: none !important;
+}

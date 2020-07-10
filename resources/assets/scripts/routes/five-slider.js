@@ -51,6 +51,9 @@ fiveSlider.on('transitionStart', function () {
     }  else if (fiveSlider.activeIndex === 4) {
       $('.five-page .animate-img').removeClass('hide-8 hide-9');
     }
+    $('.arrow-left').removeClass('no_click');
+    $('.arrow-right').removeClass('no_click');
+    $('.navigation-pag ul li').removeClass('no_click');
   }, 400);
 
   setTimeout( function () {

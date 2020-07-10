@@ -53,6 +53,9 @@ twoSlider.on('transitionStart', function () {
     }  else if (twoSlider.activeIndex === 4) {
       $('.two-page .animate-img').removeClass('hide-7');
     }
+    $('.arrow-left').removeClass('no_click');
+    $('.arrow-right').removeClass('no_click');
+    $('.navigation-pag ul li').removeClass('no_click');
   }, 400);
 
   setTimeout( function () {

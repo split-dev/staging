@@ -205,6 +205,8 @@ export default {
     $('.one-page .swiper-wrapper').css('height', arraySize[0]);
     //swiper swipe
     oneSlider.on('transitionStart', function () {
+
+
       $('.one-page .swiper-wrapper').css('height', arraySize[oneSlider.activeIndex]);
       if(oneSlider.activeIndex > 0) {
         setTimeout( function () {
@@ -227,6 +229,9 @@ export default {
         }  else if (oneSlider.activeIndex === 4) {
           $('.one-page .animate-img').removeClass('hide-1 hide-6');
         }
+        $('.arrow-left').removeClass('no_click');
+        $('.arrow-right').removeClass('no_click');
+        $('.navigation-pag ul li').removeClass('no_click');
       }, 400);
 
       setTimeout( function () {
@@ -446,6 +451,12 @@ export default {
           return;
         }
     });
+
+    $('.arrow-right, .arrow-left, .navigation-pag .ul .li').click( function () {
+      $('.arrow-left').addClass('no_click');
+      $('.arrow-right').addClass('no_click');
+      $('.navigation-pag ul li').addClass('no_click');
+    })
   },
 
   // JavaScript to be fired on all pages, after page specific JS is fired

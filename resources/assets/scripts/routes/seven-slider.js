@@ -64,6 +64,9 @@ sevenSlider.on('transitionStart', function () {
     }  else if (sevenSlider.activeIndex === 4) {
       $('.seven-page .animate-img').removeClass('hide-1 hide-7');
     }
+    $('.arrow-left').removeClass('no_click');
+    $('.arrow-right').removeClass('no_click');
+    $('.navigation-pag ul li').removeClass('no_click');
   }, 400);
 
   setTimeout( function () {

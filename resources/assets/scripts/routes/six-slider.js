@@ -51,6 +51,9 @@ sixSlider.on('transitionStart', function () {
     }  else if (sixSlider.activeIndex === 4) {
       $('.six-page .animate-img').removeClass('hide-8 hide-9');
     }
+    $('.arrow-left').removeClass('no_click');
+    $('.arrow-right').removeClass('no_click');
+    $('.navigation-pag ul li').removeClass('no_click');
   }, 400);
 
   setTimeout( function () {
