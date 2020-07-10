@@ -33,8 +33,12 @@ if (widthD < 1024) {
 }
 let arraySlide = $('.seven-page .swiper-wrapper .swiper-slide');
 let arraySize = [];
+let size = 30;
+if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+  size = 50;
+}
 for (let i = 0; i<arraySlide.length; i++) {
-  arraySize[i] = $(arraySlide[i]).height() + 20;
+  arraySize[i] = $(arraySlide[i]).height() + size;
 }
 $('.seven-page .swiper-wrapper').css('height', arraySize[0]);
 sevenSlider.on('transitionStart', function () {

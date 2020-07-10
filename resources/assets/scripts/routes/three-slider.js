@@ -19,9 +19,13 @@ if (widthD < 1024) {
   });
 }
 let arraySlide = $('.three-page .swiper-wrapper .swiper-slide');
+let size = 30;
+if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+  size = 50;
+}
 let arraySize = [];
 for (let i = 0; i<arraySlide.length; i++) {
-  arraySize[i] = $(arraySlide[i]).height() + 20;
+  arraySize[i] = $(arraySlide[i]).height() + size;
 }
 $('.three-page .swiper-wrapper').css('height', arraySize[0]);
 threeSlider.on('transitionStart', function () {
