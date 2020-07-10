@@ -117,7 +117,7 @@
     }
     h1 {
       @media (max-width: 1024px) {
-        margin: 12px 0;
+        margin: 12px auto;
       }
       @media (max-width: 575px) {
         max-width: 400px;
