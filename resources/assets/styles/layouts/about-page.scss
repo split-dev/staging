@@ -26,7 +26,7 @@
 }
 .about {
   height: 100%;
-  padding-top: 80px;
+  padding-top: 60px;
   z-index: 2;
   position: relative;
   @media (max-width: 1024px) {
@@ -70,20 +70,16 @@
     }
     p {
       color: #414042;
-      font-size: 13px;
-      line-height: 16px;
+      font-size: 14px;
+      line-height: 20px;
       margin-top: 14px;
       letter-spacing: -0.36px;
       @include NexaReg;
       @media (max-width: 1024px) {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 22px;
         max-width: 630px;
         margin: 14px auto 0;
-      }
-      @media (max-width: 575px) {
-        font-size: 19px;
-        line-height: 24px;
       }
     }
     > a {
@@ -120,9 +116,11 @@
       }
     }
     h1 {
+      @media (max-width: 1024px) {
+        margin: 12px 0;
+      }
       @media (max-width: 575px) {
         max-width: 400px;
-        margin: auto;
       }
       br {
         @media (max-width: 1024px) {
@@ -228,8 +226,8 @@
         }
         p {
           @media (max-width: 1024px) {
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 18px;
+            line-height: 22px;
           }
         }
       }

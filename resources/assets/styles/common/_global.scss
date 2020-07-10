@@ -532,6 +532,15 @@ body {
     transform: translateY(-135px);
   }
 }
+
+.about-scroll, .home-scroll {
+  &:hover {
+    &:after {
+      transform: translateY(3px);
+    }
+  }
+}
+
 .mobile {
   display: none;
   @media (max-width: 575px) {

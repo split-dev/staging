@@ -165,23 +165,32 @@ function nextSlide(numberSlide) {
     }, 200);
     $('.seven .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     $('.seven-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
-    $('.seven-page .animate-img .button_su').removeClass('vis');
+    $('.seven-page .animate-img .btn1').removeClass('vis');
+    $('.seven-page .animate-img .btn2').removeClass('vis');
   } else if (numberSlide == 1) {
     $('.seven .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     $('.seven-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
-    $('.seven-page .animate-img .button_su').removeClass('vis');
+    $('.seven-page .animate-img .btn1').removeClass('vis');
+    $('.seven-page .animate-img .btn2').removeClass('vis');
   } else if (numberSlide == 2) {
     $('.seven .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     $('.seven-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
-    $('.seven-page .animate-img .button_su').addClass('vis');
+    setTimeout(function () {
+      $('.seven-page .animate-img .btn1').addClass('vis');
+    }, 400);
+    $('.seven-page .animate-img .btn2').removeClass('vis');
   } else if (numberSlide == 3) {
     $('.seven .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     $('.seven-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
-    $('.seven-page .animate-img .button_su').addClass('vis');
+    setTimeout(function () {
+      $('.seven-page .animate-img .btn2').addClass('vis');
+    }, 400);
+    $('.seven-page .animate-img .btn1').removeClass('vis');
   } else if (numberSlide == 4) {
     $('.seven .swiper-slide:first-child .info-slide__head').addClass('hide-title');
     $('.seven-page .animate-img').addClass('hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
-    $('.seven-page .animate-img .button_su').removeClass('vis');
+    $('.seven-page .animate-img .btn1').removeClass('vis');
+    $('.seven-page .animate-img .btn2').removeClass('vis');
   }
 }
 
