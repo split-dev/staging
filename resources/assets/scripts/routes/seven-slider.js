@@ -1,4 +1,7 @@
 //swiper seven
+import 'bootstrap'
+import './buttons'
+import './mobile'
 //swiper swipe
 // eslint-disable-next-line no-undef,no-unused-vars
 var sevenSlider = new Swiper('.swiper-container-seven', {
@@ -14,8 +17,9 @@ sevenSlider.on('init', function() {
     let widthD = document.querySelector('body').getBoundingClientRect().width;
     if(widthD < 1023) {
       $('body').addClass('load');
+      $('html').addClass('load');
     }
-  }, 800);
+  }, 3000);
 });
 // init Swiper
 sevenSlider.init();

@@ -1,4 +1,5 @@
 //swiper six
+import './seven-slider'
 //swiper swipe
 // eslint-disable-next-line no-undef,no-unused-vars
 var sixSlider = new Swiper('.swiper-container-six', {

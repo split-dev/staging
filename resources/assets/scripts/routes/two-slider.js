@@ -1,4 +1,5 @@
 //swiper two
+import './three-slider'
 //swiper swipe
 // eslint-disable-next-line no-undef,no-unused-vars
 var twoSlider = new Swiper('.swiper-container-two', {
