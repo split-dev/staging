@@ -14,12 +14,13 @@ var sevenSlider = new Swiper('.swiper-container-seven', {
 sevenSlider.on('init', function() {
   setTimeout( function () {
     $('.load-page').fadeOut( 'slow', function() {});
+    $('.pulse').fadeOut( 'slow', function() {});
     let widthD = document.querySelector('body').getBoundingClientRect().width;
     if(widthD < 1023) {
       $('body').addClass('load');
       $('html').addClass('load');
     }
-  }, 3000);
+  }, 4000);
 });
 // init Swiper
 sevenSlider.init();

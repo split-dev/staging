@@ -259,6 +259,9 @@ h1 {
       margin: auto;
       min-width: 100%;
     }
+    @media (max-width: 575px) {
+      margin: 0 !important;
+    }
     &.fade-left {
       opacity: 0 !important;
       transform: translateX(-30px) !important;
