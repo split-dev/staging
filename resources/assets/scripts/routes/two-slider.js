@@ -22,7 +22,12 @@ if (widthD < 1024) {
 let arraySlide = $('.two-page .swiper-wrapper .swiper-slide');
 let arraySize = [];
 for (let i = 0; i<arraySlide.length; i++) {
-  arraySize[i] = $(arraySlide[i]).height() + 90;
+  arraySize[i] = $(arraySlide[i]).height() + 30;
+}
+if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+  console.log('safari')
+} else {
+  console.log('other')
 }
 $('.two-page .swiper-wrapper').css('height', arraySize[0]);
 twoSlider.on('transitionStart', function () {
