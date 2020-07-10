@@ -23,7 +23,7 @@ let arraySlide = $('.two-page .swiper-wrapper .swiper-slide');
 let arraySize = [];
 let size = 30;
 if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-  size = 70;
+  size = 50;
 }
 for (let i = 0; i<arraySlide.length; i++) {
   arraySize[i] = $(arraySlide[i]).height() + size;
