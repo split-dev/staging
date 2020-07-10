@@ -112,6 +112,10 @@
         width: 100%;
         max-width: 169px;
         height: 33.28px;
+        .button_su_inner {
+          max-width: 169px;
+          height: 33.28px;
+        }
       }
       @media (max-width: 575px) {
         margin-bottom: 100px;
