@@ -22,7 +22,7 @@ if (widthD < 1024) {
 let arraySlide = $('.two-page .swiper-wrapper .swiper-slide');
 let arraySize = [];
 for (let i = 0; i<arraySlide.length; i++) {
-  arraySize[i] = $(arraySlide[i]).height() + 20;
+  arraySize[i] = $(arraySlide[i]).height() + 90;
 }
 $('.two-page .swiper-wrapper').css('height', arraySize[0]);
 twoSlider.on('transitionStart', function () {
