@@ -188,7 +188,7 @@ function nextSlide(numberSlide) {
     }
   } else if (numberSlide == 3) {
     $('.three .swiper-slide:first-child .info-slide__head').addClass('hide-title');
-    if (threeSlider.activeIndex == 3 || threeSlider.activeIndex == 2) {
+    if (threeSlider.activeIndex == 3 || threeSlider.activeIndex == 2 || threeSlider.activeIndex == 4) {
       $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-5');
     } else {
       $('.three-page .animate-img').addClass('hide-1 hide-2 hide-3 hide-4 hide-5 hide-6 hide-7');
