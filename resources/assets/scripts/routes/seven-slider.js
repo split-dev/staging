@@ -160,16 +160,33 @@ $('.seven-page .arrow-right, .seven-page .arrow-left, .seven-page .navigation-pa
     if ($(this).hasClass('arrow-left')) {
       if (sevenSlider.activeIndex > 0) {
         nextSlide(sevenSlider.activeIndex - 1);
+      } else {
+        // eslint-disable-next-line no-undef
+        fullpage_api.moveSectionUp();
+        setTimeout( function () {
+          $('.arrow-left').removeClass('no_click');
+          $('.arrow-right').removeClass('no_click');
+          $('.navigation-pag ul li').removeClass('no_click');
+        }, 1000);
       }
     } else if ($(this).hasClass('arrow-right')) {
       if (sevenSlider.activeIndex < 4) {
         nextSlide(sevenSlider.activeIndex + 1);
+      } else {
+        // eslint-disable-next-line no-undef
+        fullpage_api.moveSectionDown();
+        setTimeout( function () {
+          $('.arrow-left').removeClass('no_click');
+          $('.arrow-right').removeClass('no_click');
+          $('.navigation-pag ul li').removeClass('no_click');
+        }, 1000);
       }
     } else {
       nextSlide(Number($(this).attr('data-number')));
     }
   }
 });
+
 function nextSlide(numberSlide) {
   if (numberSlide == 0) {
     setTimeout( function () {

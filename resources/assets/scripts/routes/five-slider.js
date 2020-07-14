@@ -142,10 +142,26 @@ $('.five-page .arrow-right, .five-page .arrow-left, .five-page .navigation-pag l
     if ($(this).hasClass('arrow-left')) {
       if (fiveSlider.activeIndex > 0) {
         nextSlide(fiveSlider.activeIndex - 1);
+      } else {
+        // eslint-disable-next-line no-undef
+        fullpage_api.moveSectionUp();
+        setTimeout( function () {
+          $('.arrow-left').removeClass('no_click');
+          $('.arrow-right').removeClass('no_click');
+          $('.navigation-pag ul li').removeClass('no_click');
+        }, 1000);
       }
     } else if ($(this).hasClass('arrow-right')) {
       if (fiveSlider.activeIndex < 4) {
         nextSlide(fiveSlider.activeIndex + 1);
+      } else {
+        // eslint-disable-next-line no-undef
+        fullpage_api.moveSectionDown();
+        setTimeout( function () {
+          $('.arrow-left').removeClass('no_click');
+          $('.arrow-right').removeClass('no_click');
+          $('.navigation-pag ul li').removeClass('no_click');
+        }, 1000);
       }
     } else {
       nextSlide(Number($(this).attr('data-number')));

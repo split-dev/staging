@@ -317,8 +317,10 @@ body {
       transform: translateX(-5px);
     }
     &.opacity {
-      opacity: 0.5;
-      pointer-events: none;
+      @media (max-width: 1023px) {
+        opacity: 0.5;
+        pointer-events: none;
+      }
     }
   }
   .arrow-right {
@@ -340,8 +342,10 @@ body {
       transform: translateX(5px);
     }
     &.opacity {
-      opacity: 0.5;
-      pointer-events: none;
+      @media (max-width: 1023px) {
+        opacity: 0.5;
+        pointer-events: none;
+      }
     }
   }
   ul {
